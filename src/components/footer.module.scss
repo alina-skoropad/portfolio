@@ -1,0 +1,25 @@
+.footer {
+    padding: 3rem;
+    background: var(--background);
+    color: var(--foreground);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.footer__social {
+    span {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
