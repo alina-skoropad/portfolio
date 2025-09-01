@@ -10,7 +10,9 @@
 }
 
 .projects__list_item {
+    width: 100%;
     max-width: calc(50% - 1.5rem);
+    position: relative;
 
     img {
         max-width: 100%;
@@ -35,13 +37,18 @@
     }
 
     a {
-        display: block;
+        display: inline-block;
+        width: 100%;
 
         @media (hover: hover) {
             &:hover {
+                .projects__list_img {
+                    border-radius: 1.5rem;
+                }
+
                 img {
                     filter: grayscale(100%);
-                    border-radius: 1.5rem;
+                    transform: scale(1.1);
                 }
 
                 h2 {
@@ -50,6 +57,15 @@
             }
         }
     }
+}
+
+.projects__list_img {
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    overflow: hidden;
+    background-color: #d6d6d5;
+    display: block;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 800px) {

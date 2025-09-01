@@ -205,6 +205,27 @@
       }
     }
   }
+
+  &.project__link--jtv-light-green {
+    --light-green: #afcb08;
+    border-color: var(--light-green);
+    color: var(--light-green);
+
+    @media (hover: hover) {
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--background);
+
+        &:before {
+          background-color: var(--light-green);
+        }
+      }
+    }
+  }
+
+  
 }
 
 .project__details {

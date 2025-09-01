@@ -14,7 +14,7 @@ const Projects = () => {
         {allProjects.map((project) => (
           <div className={styles.projects__list_item} key={project.id}>
             <Link href={`/projects/${project.id}`}>
-              {project.imageUrl && <Image src={project.imageUrl} alt={`Main image for ${project.title}`} width={800} height={400} className={undefined} />}
+              <div className={styles.projects__list_img}>{project.imageUrl && <Image src={project.imageUrl} alt={`Main image for ${project.title}`} width={800} height={400} className={undefined} />}</div>
               <p>{project.tags}</p>
               <h2>{project.title}</h2>
             </Link>
