@@ -17,7 +17,7 @@
   align-items: center;
   overflow: hidden;
 
-  picture, img {
+  picture, img, source {
     object-fit: cover;
     min-width: 100%;
     min-height: 100%
@@ -272,7 +272,7 @@
   justify-content: center;
   overflow: hidden;
 
-  picture, img {
+  picture, img, source {
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
