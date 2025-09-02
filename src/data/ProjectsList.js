@@ -1,4 +1,4 @@
-export const allProjects = [
+export const ProjectsList = [
   {
     id: "bam",
     imageUrl: "/images/projects/bam/project-hero",
