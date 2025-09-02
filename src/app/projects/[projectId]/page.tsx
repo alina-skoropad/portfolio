@@ -7,7 +7,7 @@ import styles from "./project.module.scss";
 import { allProjects } from "@/data/projects";
 
 type ProjectPageProps = {
-  params: Promise<{ projectId: string }>;
+  params: {projectId: string};
 };
 
 export async function generateStaticParams() {
@@ -18,16 +18,14 @@ export async function generateStaticParams() {
 
 export default async function ProjectDetailsPage({ params }: ProjectPageProps) {
   const { projectId } = await params;
-  const projectIndex = allProjects.findIndex((p) => p.id === projectId);
-  const project = allProjects[projectIndex];
+  const project = allProjects.find((p) => p.id === projectId);
 
   if (!project) {
     notFound();
   }
 
-  const nextProjectIndex = (projectIndex + 1) % allProjects.length;
-  const nextProjectId = allProjects[nextProjectIndex].id;
-  const nextProjectTitle = allProjects[nextProjectIndex].title;
+  const currentProjectIndex = allProjects.indexOf(project);
+  const nextProject = allProjects[(currentProjectIndex + 1) % allProjects.length];
 
   return (
     <div className={styles.project__container}>
@@ -68,9 +66,9 @@ export default async function ProjectDetailsPage({ params }: ProjectPageProps) {
               </figure>
               {index === project.additionalPosition && project.additionalImages && (
                 <div className={styles.project__additional}>
-                  {project.additionalImages.map((img, number) => (
-                    <figure key={number} className={styles.project__additional_image}>
-                      <Image src={img.src} alt={img.alt} width={1600} height={900} className={undefined} />
+                  {project.additionalImages.map((additionalImg, additionalIndex) => (
+                    <figure key={additionalIndex} className={styles.project__additional_image}>
+                      <Image src={additionalImg.src} alt={additionalImg.alt} width={1600} height={900} className={undefined} />
                     </figure>
                   ))}
                 </div>
@@ -80,8 +78,8 @@ export default async function ProjectDetailsPage({ params }: ProjectPageProps) {
       </div>
 
       <div className={styles.project__navigation}>
-        <Link href={`/projects/${nextProjectId}`} className={styles.project__link_next}>
-          <h2>Next Project: {nextProjectTitle}</h2>
+        <Link href={`/projects/${nextProject.id}`} className={styles.project__link_next}>
+          <h2>Next Project: {nextProject.title}</h2>
         </Link>
       </div>
     </div>
