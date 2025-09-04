@@ -99,7 +99,7 @@ export const ProjectsList = [
       {src: "/images/projects/dohn/img-3", alt: "Dohn Desktop Screen"},
     ],
     timeline: "2025",
-    link: "https://dohnconstruction-next.vercel.app",
+    link: "https://www.dohnconstruction.com/",
     colorClass: "project__link--dohn-dark-green",
     additionalPosition: 1,
     button: "Visit Website",
