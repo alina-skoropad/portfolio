@@ -98,3 +98,24 @@ h3 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Slider */
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+  margin: 0 3rem;
+}
+
+.slick-slide div {
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  .slick-slide {
+    margin: 0 1.5rem;
+  }
+}

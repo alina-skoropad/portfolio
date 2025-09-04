@@ -257,30 +257,6 @@
   }
 }
 
-.project__additional {
-  display: flex;
-  flex-wrap: wrap;
-  width: 140vw;
-  position: relative;
-  margin-left: -20vw;
-  margin-bottom: 12rem;
-  gap: 6rem;
-}
-
-.project__additional_image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-
-  picture, img, source {
-    object-fit: cover;
-    min-width: 100%;
-    min-height: 100%;
-    height: 100%;
-  }
-}
-
 .project__navigation {
   text-align: center;
   margin-bottom: 12rem;
@@ -324,18 +300,12 @@
   .project__details {
     margin-bottom: 8rem;
   }
-
 }
 
 @media (max-width: 800px) {
-
   .project__link,
   .project__prototype {
     font-size: 4vw;
-  }
-
-  .project__additional {
-    gap: 3rem;
   }
 
   .project__image {
@@ -348,10 +318,6 @@
     figcaption {
       margin: 1.5rem auto;
     }
-  }
-
-  .project__additional {
-    margin-bottom: 9rem;
   }
 
   .project__navigation {
@@ -390,3 +356,4 @@
     }
   }
 }
+

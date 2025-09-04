@@ -3,6 +3,8 @@ import {Mona_Sans} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const font = Mona_Sans({
   weight: ["300", "400", "500", "600", "700"],
@@ -13,6 +15,9 @@ const font = Mona_Sans({
 export const metadata: Metadata = {
   title: "Alina Skoropad",
   description: "Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
