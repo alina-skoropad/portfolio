@@ -1,26 +1,27 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export function useScrollAnimation() {
   useEffect(() => {
-    const handleScroll = () => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
+    const elements = document.querySelectorAll(".animate-on-scroll");
 
-      elements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1, 
+      }
+    );
 
-        if (elementTop < windowHeight - 150) {
-          element.classList.add('is-visible');
-        }
-      });
-    };
+    elements.forEach((el) => observer.observe(el));
 
-    window.addEventListener('scroll', handleScroll);
-
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => observer.disconnect();
   }, []);
 }
