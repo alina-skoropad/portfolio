@@ -8,6 +8,7 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   width: number;
   height: number;
   formatFallback?: "jpg" | "png"; 
+  priority?: boolean;
 }
 
 const Image: FC<ImageProps> = ({
@@ -19,6 +20,7 @@ const Image: FC<ImageProps> = ({
   formatFallback = "jpg",
   loading = "lazy", 
   decoding = "async", 
+  priority,
   ...rest
 }) => {
   const webpSrc = `${src}.webp`;
@@ -34,7 +36,7 @@ const Image: FC<ImageProps> = ({
         width={width}
         height={height}
         className={className}
-        loading={loading}
+        loading={priority ? "eager" : loading}
         decoding={decoding}
         {...rest} 
       />
