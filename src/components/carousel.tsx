@@ -47,7 +47,7 @@ const MyCarousel = ({images}: {images: ImageObject[]}) => {
       <Slider ref={sliderRef} {...settings}>
         {images.map((img: ImageObject, index: number) => (
           <div key={index} className={styles.slick_image}>
-            <Image src={img.src} alt={img.alt} width={1600} height={900} className={styles.slick_image} />
+            <Image src={img.src} alt={img.alt} width={1920} height={900} className={styles.slick_image} />
           </div>
         ))}
       </Slider>

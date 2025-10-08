@@ -3,12 +3,14 @@
 import React, { FC } from "react";
 
 interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  src: string;
+  src: string;                 
   alt: string;
-  width: number;
-  height: number;
+  width: number;                 
+  height: number;               
   formatFallback?: "jpg" | "png"; 
   priority?: boolean;
+  sizes?: string;                
+  srcSetWidths?: number[];       
 }
 
 const Image: FC<ImageProps> = ({
@@ -18,27 +20,34 @@ const Image: FC<ImageProps> = ({
   height,
   className,
   formatFallback = "jpg",
-  loading = "lazy", 
-  decoding = "async", 
-  priority,
+  loading = "lazy",
+  decoding = "async",
+  priority = false,
+  sizes = "(max-width: 768px) 100vw, 1280px",
+  srcSetWidths = [320, 480, 768, 1024, 1280, 1920, 2560],
   ...rest
 }) => {
-  const webpSrc = `${src}.webp`;
-  const fallbackSrc = `${src}.${formatFallback}`;
+
+  const generateSrcSet = (format: "webp" | typeof formatFallback) =>
+    srcSetWidths
+      .map(w => `${src}-${w}w.${format} ${w}w`)
+      .join(", ");
 
   return (
     <picture>
-      <source srcSet={webpSrc} type="image/webp" />
-      <source srcSet={fallbackSrc} type={`image/${formatFallback}`} />
+      <source srcSet={generateSrcSet("webp")} type="image/webp" sizes={sizes} />
+      <source srcSet={generateSrcSet(formatFallback)} type={`image/${formatFallback}`} sizes={sizes} />
       <img
-        src={fallbackSrc}
+        src={`${src}-${width}w.${formatFallback}`}
         alt={alt}
         width={width}
         height={height}
         className={className}
         loading={priority ? "eager" : loading}
         decoding={decoding}
-        {...rest} 
+        sizes={sizes}
+        srcSet={generateSrcSet(formatFallback)}
+        {...rest}
       />
     </picture>
   );

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-images": "node src/scripts/1.js"
   },
   "dependencies": {
     "next": "15.4.5",

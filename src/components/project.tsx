@@ -46,7 +46,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
     <div className={styles.project__container}>
       {project.imageUrl && (
         <div className={`${styles.project__hero} animate-on-scroll`}>
-          <Image src={project.imageUrl} alt={`Main image for ${project.title}`} width={1600} height={900} priority />
+          <Image src={project.imageUrl} alt={`Main image for ${project.title}`} width={2560} height={900}  />
         </div>
       )}
 
@@ -77,7 +77,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
           {project.galleryImages?.map((img, index) => (
             <div key={index}>
               <figure className={`${styles.project__image} animate-on-scroll`}>
-                <Image src={img.src} alt={img.alt} width={1600} height={900} className={img.className ? styles[img.className] : undefined} />
+                <Image src={img.src} alt={img.alt} width={2560} height={900} className={img.className ? styles[img.className] : undefined} />
                 {img.figcaption && <figcaption>{img.figcaption}</figcaption>}
               </figure>
               {index === project.additionalPosition && additionalCarousel}

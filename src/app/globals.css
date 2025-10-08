@@ -92,7 +92,6 @@ h3 {
   opacity: 0;
   transform: translateY(2rem);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  transition-delay: 0.1s;
 }
 
 .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
