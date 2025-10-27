@@ -1,12 +1,12 @@
 "use client";
 
 import React, {useMemo} from "react";
-import Image from "@/components/image";
+import Image from "@/components/common/image";
 import Link from "next/link";
 import {useScrollAnimation} from "@/hooks/useScrollAnimation";
 
 import styles from "./project.module.scss";
-import MyCarousel from "@/components/carousel";
+import MyCarousel from "@/components/carousel/carousel";
 
 type ImageObject = {
   src: string;

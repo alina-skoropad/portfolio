@@ -1,8 +1,8 @@
 import type {Metadata} from "next";
 import {Mona_Sans} from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

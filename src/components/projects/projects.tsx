@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "@/components/image";
+import Image from "@/components/common/image";
 import {useScrollAnimation} from "@/hooks/useScrollAnimation";
 
 import styles from "./projects.module.scss";

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { ProjectsList } from "@/data/ProjectsList";
-import ProjectDetails from "@/components/project"; 
+import ProjectDetails from "@/components/project/project"; 
 
 type ProjectDetailsPageProps = {
   params: Promise<{ projectId: string }>;

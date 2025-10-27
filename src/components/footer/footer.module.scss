@@ -6,11 +6,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 6rem;
-}
 
-.footer__social {
-    span {
-        padding: 0 1rem;
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 }
 
@@ -20,6 +20,5 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        
     }
 }
