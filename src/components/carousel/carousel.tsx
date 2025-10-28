@@ -16,7 +16,7 @@ type ArrowProps = {
 
 const NextArrow = ({onClick}: ArrowProps) => (
   <button
-    className={`${styles.slick__arrow} ${styles["slick__arrow--next"]}`}
+    className={`${styles.slider__arrow} ${styles["slider__arrow--next"]}`}
     onClick={onClick}
     aria-label="Next Slide"
   />
@@ -24,7 +24,7 @@ const NextArrow = ({onClick}: ArrowProps) => (
 
 const PrevArrow = ({onClick}: ArrowProps) => (
   <button
-    className={`${styles.slick__arrow} ${styles["slick__arrow--prev"]}`}
+    className={`${styles.slider__arrow} ${styles["slider__arrow--prev"]}`}
     onClick={onClick}
     aria-label="Previous Slide"
   />
@@ -67,16 +67,16 @@ const MyCarousel = ({images}: {images: ImageObject[]}) => {
   };
 
   return (
-    <div className={styles.slick}>
+    <div className={styles.slider}>
       <Slider ref={sliderRef} {...settings}>
         {images.map((img, index) => (
-          <div key={index} className={styles.slick__slide}>
+          <div key={index} className={styles.slider__slide}>
             <Image
               src={img.src}
               alt={img.alt}
               width={1920}
               height={900}
-              className={styles.slick__image}
+              className={styles.slider__image}
               onLoad={handleImageLoad}
             />
           </div>

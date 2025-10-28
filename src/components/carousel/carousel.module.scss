@@ -1,4 +1,4 @@
-.slick {
+.slider {
   margin-bottom: 12rem;
 
   &__slide {
@@ -70,7 +70,7 @@
     &:hover,
     &:focus,
     &:active {
-      .slick__arrow {
+      .slider__arrow {
         opacity: 1;
       }
     }
@@ -79,7 +79,7 @@
 
 
 @media (max-width: 800px) {
-  .slick {
+  .slider {
     margin-bottom: 9rem;
 
     &__arrow {
