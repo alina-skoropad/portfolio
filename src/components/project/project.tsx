@@ -46,7 +46,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
     <div className={styles.project__container}>
       {project.imageUrl && (
         <div className={`${styles.project__hero} animate-on-scroll`}>
-          <Image src={project.imageUrl} alt={`Main image for ${project.title}`} width={2560} height={900}  />
+          <Image src={project.imageUrl} alt={`Main image for ${project.title}`} width={2560} height={900} />
         </div>
       )}
 
@@ -62,11 +62,11 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
       </div>
 
       <div className={styles.project__details}>
-        <div className={`${styles.project__details_item} ${styles["project__details_item--contr"]} animate-on-scroll`}>
+        <div className={`${styles["project__details-item"]} ${styles["project__details-item--contr"]} animate-on-scroll`}>
           <h3>CONTRIBUTION</h3>
           <p>{project.contribution}</p>
         </div>
-        <div className={`${styles.project__details_item} animate-on-scroll`}>
+        <div className={`${styles["project__details-item"]} animate-on-scroll`}>
           <h3>TIMELINE</h3>
           <p>{project.timeline}</p>
         </div>
@@ -87,7 +87,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
       )}
 
       <div className={`${styles.project__navigation} animate-on-scroll`}>
-        <Link href={`/projects/${nextProject.id}`} className={styles.project__link_next}>
+        <Link href={`/projects/${nextProject.id}`} className={styles["project__link-next"]}>
           <h2>Next Project: {nextProject.title}</h2>
         </Link>
       </div>

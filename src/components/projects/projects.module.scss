@@ -1,101 +1,94 @@
 .projects {
     width: 100%;
-}
 
-.projects__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: space-between;
-}
-
-.projects__list_item {
-    width: 100%;
-    max-width: calc(50% - 1.5rem);
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    will-change: opacity, transform;
-
-    &.visible {
-        opacity: 1;
-        transform: translateY(0);
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: space-between;
     }
 
-    h2 {
-        font-size: 2.4rem;
-        font-weight: normal;
-        display: inline;
-        background: linear-gradient(var(--foreground), var(--foreground)) left bottom no-repeat;
-        background-size: 0 1px;
-        transition: background-size 0.5s ease-in-out;
-        will-change: background-size;
-    }
-
-    p {
-        font-size: 1.4rem;
-        margin: 1.5rem 0 0.75rem;
-    }
-
-    a {
-        display: inline-block;
+    &__list_item {
         width: 100%;
-        overflow: hidden;
+        max-width: calc(50% - 1.5rem);
+        position: relative;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-        @media (hover: hover) {
-            &:hover {
-                .projects__list_img {
-                    border-radius: 2rem;
+        h2 {
+            font-size: 2.4rem;
+            font-weight: normal;
+            display: inline;
+            background: linear-gradient(var(--foreground), var(--foreground)) left bottom no-repeat;
+            background-size: 0 1px;
+            transition: background-size 0.5s ease-in-out;
+        }
 
-                    img {
-                        transform: scale(1.05);
+        p {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+
+            @media (hover: hover) {
+                &:hover {
+                    .projects__list_img {
+                        border-radius: 2rem;
+
+                        img {
+                            transform: scale(1.05);
+                        }
                     }
-                }
 
-                h2 {
-                    background-size: 100% 1px;
+                    h2 {
+                        background-size: 100% 1px;
+                    }
                 }
             }
         }
     }
-}
 
-.projects__list_img {
-    aspect-ratio: 3 / 2;
-    width: 100%;
-    overflow: hidden;
-    background-color: #d6d6d5;
-    display: block;
-    border-radius: 0;
-    transition: border-radius 0.3s ease-in-out;
-    will-change: transform;
-
-    img {
-        max-width: 100%;
+    &__list_img {
         width: 100%;
-        height: auto;
-        display: block;
-        transform: scale(1);
-        transition: transform 0.3s ease-in-out;
-        will-change: transform;
-    }
-}
+        aspect-ratio: 3 / 2;
+        background-color: #d6d6d5;
+        overflow: hidden;
+        border-radius: 0;
+        transition: border-radius 0.3s ease-in-out;
 
-@media (max-width: 800px) {
-    .projects__list {
-        flex-direction: column;
-        gap: 6rem;
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
     }
 
-    .projects__list_item {
-        max-width: 100%;
-    }
-}
+    @media (max-width: 800px) {
+        &__list {
+            flex-direction: column;
+            gap: 6rem;
+        }
 
-@media (max-width: 500px) {
-    .projects__list_item h2 {
-        font-size: 2rem;
+        &__list_item {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__list_item h2 {
+            font-size: 2rem;
+        }
     }
 }
