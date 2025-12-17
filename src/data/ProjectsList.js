@@ -5,7 +5,9 @@ export const ProjectsList = [
     tags: "Design • HTML/CSS",
     title: "BAM Broadband",
     description: "BAM Broadband is an internet service provider, formerly known as Desert iNet, that primarily serves residential and business customers in Arizona and Colorado. They offer both fiber internet and fixed wireless options, with a focus on providing fast, reliable service and customer satisfaction.",
-    contribution: "Responsive website design, UX/UI Design, graphic design, HTML/CSS coding",
+    contribution: {
+      items: ["Designed a fully responsive website reflecting the brand refresh", "Developed UX/UI solutions to improve navigation and overall user experience", "Created custom graphics and visual elements consistent with the new brand style", "Implemented HTML/CSS coding for new pages and landing pages"],
+    },
     galleryImages: [
       {src: "/images/projects/bam/project-mockup1", alt: "BAM Graphic Design", className: "project__image--smaller", figcaption: "Graphic Design"},
       {src: "/images/projects/bam/project-mockup2", alt: "BAM Responsive Web-Design", figcaption: "Responsive Web-Design"},
@@ -31,7 +33,9 @@ export const ProjectsList = [
     tags: "Design • HTML/CSS",
     title: "Green Valley Naturals",
     description: "Green Valley Naturals is a manufacturing company specializing in natural health products. They offer a range of items, including supplements for muscle, bone, cognitive, and overall health, using traceable and GMO-free ingredients. They operate through online stores and are known for their 90-day satisfaction guarantee on all purchases.",
-    contribution: "Responsive website design, UX/UI Design, graphic design, emails, HTML/CSS coding",
+    contribution: {
+      items: ["Designed a fully responsive, clean, and simple website reflecting the brand refresh", "Developed UX/UI solutions for intuitive navigation and subscription-focused layout", "Created clear landing pages, banners, surveys, and emails to showcase products and promotions", "Implemented a user-friendly checkout and coded HTML/CSS for pages and emails"],
+    },
     galleryImages: [
       {src: "/images/projects/gvn/project-mockup1", alt: "GVN Graphic Design", className: "project__image--smaller"},
       {src: "/images/projects/gvn/project-mockup2", alt: "GVN Mobile Screens", figcaption: "Mobile Screens"},
@@ -61,7 +65,9 @@ export const ProjectsList = [
     tags: "Design",
     title: "GVN Supplement Tracker Mobile App",
     description: "Green Valley Naturals is a manufacturing company specializing in natural health products. They offer a range of items, including supplements for muscle, bone, cognitive, and overall health, using traceable and GMO-free ingredients. They operate through online stores and are known for their 90-day satisfaction guarantee on all purchases.",
-    contribution: "Mobile App Design, UX/UI Design, graphic design",
+    contribution: {
+      items: ["Designed mobile app screens and prototype for GVN Supplement Tracker", "Developed intuitive UX/UI tailored to health and supplement tracking", "Created clean and engaging graphic assets for mobile interface"],
+    },
     galleryImages: [
       {src: "/images/projects/gvn-app/project-mockup1", alt: "GVN Supplement Tracker Mobile App Prototype", figcaption: "Supplement Tracker Mobile App Prototype"},
       {src: "/images/projects/gvn-app/project-mockup2", alt: "GVN Mobile App Screens"},
@@ -84,7 +90,9 @@ export const ProjectsList = [
     tags: "Design • HTML/CSS",
     title: "Dohn Construction",
     description: "Dohn Construction is a general contractor and custom builder based in Colorado. Founded in 1992 by Doug and Connie Dohn, the company focuses on delivering quality and value to clients by understanding their needs and vision according to their website. They have completed over 15 million square feet of projects, including multifamily housing, retail spaces, restaurants, educational facilities, and more.",
-    contribution: "Responsive website design, UX/UI Design, HTML/CSS coding",
+    contribution: {
+      items: ["Designed a fully responsive website optimized for desktop and mobile users", "Developed UX/UI solutions to clearly showcase services and project portfolio", "Created visual elements and graphic assets that strengthen the brand’s professional image", "Implemented HTML/CSS coding to deliver polished responsive pages"],
+    },
     galleryImages: [
       {src: "/images/projects/dohn/project-mockup1", alt: "Dohn Responsive Web-Design", figcaption: "Responsive Web-Design"},
       {src: "/images/projects/dohn/project-mockup2", alt: "Dohn Mobile Screens", className: "project__image--smaller", figcaption: "Mobile Screens"},
@@ -110,7 +118,9 @@ export const ProjectsList = [
     tags: "Design • HTML/CSS",
     title: "Military Benefit Association",
     description: "The Military Benefit Association (MBA) is a non-profit organization that provides insurance and other financial benefits to service members, veterans, federal employees, and their families. Founded in 1956 by former service members, MBA's mission is to promote the economic welfare of its members and their families. ",
-    contribution: "Responsive website design, UX/UI Design, graphic design, emails, HTML/CSS coding",
+    contribution: {
+      items: ["Designed a fully responsive website optimized for desktop and mobile screens", "Developed UX/UI solutions to make benefits and services easy to understand", "Created graphic assets and campaign visuals including emails and landing content", "Implemented HTML/CSS coding across pages and email templates"],
+    },
     galleryImages: [
       {src: "/images/projects/mba/project-mockup1", alt: "MBA Responsive Web-Design", className: "project__image--smaller", figcaption: "Responsive Web-Design"},
       {src: "/images/projects/mba/project-mockup2", alt: "MBA Mobile Screens", figcaption: "Mobile Screens"},
@@ -139,7 +149,9 @@ export const ProjectsList = [
     tags: "Design • HTML/CSS",
     title: "Trades2Work",
     description: "Trades2Work is the app that simplifies time keeping & more. Built for the construction trades but for keeping any field force on track.",
-    contribution: "Mobile App Design, UX/UI Design, branding design, responsive website design, HTML/CSS coding",
+    contribution: {
+      items: ["Designed mobile app UI/UX to simplify time tracking and field workflows", "Created responsive website design aligned with app functionality", "Developed branding and visual assets for a cohesive product experience", "Implemented HTML/CSS coding for web layouts and interfaces"],
+    },
     galleryImages: [
       {src: "/images/projects/t2w/project-mockup1", alt: "T2W Website / Mobile App", figcaption: "Website / Mobile App"},
       {src: "/images/projects/t2w/project-mockup2", alt: "T2W Mobile App Screens", className: "project__image--smaller", figcaption: "Mobile App Screens"},
@@ -165,7 +177,9 @@ export const ProjectsList = [
     tags: "Design • HTML/CSS",
     title: "JaybirdTV",
     description: "JaybirdTV is a Cross-Platform Mobile App for TV Streaming.",
-    contribution: "App Design for TV, desktop, tablet, and mobile, UX/UI Design, HTML/CSS coding",
+    contribution: {
+      items: ["Designed cross-platform UI for TV, tablet, mobile, and desktop apps", "Developed UX/UI solutions for intuitive content discovery and streaming", "Designed an admin panel for managing branding styles across platforms", "Created flexible UI components to support dynamic theming and brand customization", "Implemented HTML/CSS for responsive and reusable interface layouts"],
+    },
     galleryImages: [
       {src: "/images/projects/jtv/project-mockup1", alt: "JTV Tablet and Mobile App Screens", className: "project__image--smaller"},
       {src: "/images/projects/jtv/project-mockup2", alt: "JTV Mobile App Screens", className: "project__image--smaller", figcaption: "Mobile App Screens"},

@@ -67,6 +67,19 @@
   }
 }
 
+.project__contribution {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.project__contribution-item {
+  margin-bottom: 0.8rem;
+
+  &::marker {
+    font-size: 0.8em;
+  }
+}
+
 .project__prototype {
   flex-basis: 20rem;
   color: var(--grey);

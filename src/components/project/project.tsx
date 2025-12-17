@@ -19,7 +19,9 @@ type Project = {
   id: string;
   title: string;
   description: string;
-  contribution: string;
+  contribution: {
+    items: string[];
+  };
   timeline: string;
   imageUrl: string;
   link?: string;
@@ -64,7 +66,11 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
       <div className={styles.project__details}>
         <div className={`${styles["project__details-item"]} ${styles["project__details-item--contr"]} animate-on-scroll`}>
           <h3>CONTRIBUTION</h3>
-          <p>{project.contribution}</p>
+          <ul className={styles.project__contribution}>
+            {project.contribution.items.map((item, index) => (
+              <li key={index} className={styles["project__contribution-item"]}>{item}</li>
+            ))}
+          </ul>
         </div>
         <div className={`${styles["project__details-item"]} animate-on-scroll`}>
           <h3>TIMELINE</h3>
