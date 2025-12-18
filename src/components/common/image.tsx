@@ -24,14 +24,14 @@ const Image: FC<ImageProps> = ({
   decoding = "async",
   priority = false,
   sizes = "(max-width: 768px) 100vw, 1280px",
-  srcSetWidths = [320, 480, 768, 1024, 1280, 1920, 2560],
+  srcSetWidths = [321, 480, 768, 1024, 1280, 1920, 2560],
   ...rest
 }) => {
 
   const generateSrcSet = (format: "webp" | typeof formatFallback) =>
     srcSetWidths
       .map(w => `${src}-${w}w.${format} ${w}w`)
-      .join(", ");
+      .join(", "); 
 
   return (
     <picture>
