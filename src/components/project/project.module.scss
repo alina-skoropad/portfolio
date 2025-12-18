@@ -245,7 +245,7 @@
   margin: 6rem 0 12rem;
   padding: 0 calc(2rem + 2.5vw);
   display: flex;
-  gap: 6rem;
+  gap: 9rem;
 }
 
 .project__details-item {
@@ -258,7 +258,7 @@
 }
 
 .project__details-item--contr {
-  flex-basis: 50rem;
+  flex-basis: 60rem;
   flex-shrink: 1;
 
   p {
@@ -333,6 +333,16 @@
 
   .project__navigation {
     margin-bottom: 6rem;
+  }
+
+  .project__details {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .project__details-item,
+  .project__details-item--contr {
+    flex-basis: 0;
   }
 }
 
