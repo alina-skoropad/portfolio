@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth" className={font.className}>
       <body>
         <Navbar />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
