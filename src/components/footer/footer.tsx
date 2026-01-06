@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./footer.module.scss";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(); 
 
   return (
     <footer className={styles.footer}>
