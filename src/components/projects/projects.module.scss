@@ -31,8 +31,20 @@
         }
 
         p {
-            font-size: 1.4rem;
             margin: 1.5rem 0 0.75rem;
+        }
+
+        &_tag {
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-right: 0.4rem;
+            padding: 0.08rem 0.4rem;
+            background-color: rgba(0,0,0,0.03);
+            color: inherit;
+            border-radius: 0.3rem;
+            vertical-align: middle;
+            cursor: default;
+            text-decoration: none;
         }
 
         a {

@@ -1,7 +1,7 @@
 @import "reset.css";
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #55585D;
   --grey: #767676;
   --grey-50: rgba(128, 128, 128, 0.5);

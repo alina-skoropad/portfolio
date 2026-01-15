@@ -2,7 +2,7 @@ export const ProjectsList = [
   {
     id: "bam",
     imageUrl: "/images/projects/bam/project-hero",
-    tags: "Design • HTML/CSS",
+    tags: ["B2B", "Web", "Redesign", "Responsive", "Front-End"],
     title: "BAM Broadband",
     description: "BAM Broadband needed a refreshed website to clearly communicate multiple service offerings while supporting marketing and sales teams, improving clarity and scalability for future marketing pages.",
     contribution: {
@@ -30,7 +30,7 @@ export const ProjectsList = [
   {
     id: "gvn",
     imageUrl: "/images/projects/gvn/project-hero",
-    tags: "Design • HTML/CSS",
+    tags: ["B2B", "Web", "E-commerce", "Marketing", "Responsive", "Front-End"],
     title: "Green Valley Naturals",
     description: "Green Valley Naturals needed a clean, intuitive online presence to improve product discoverability and subscription conversions, strengthening brand visibility and customer engagement.",
     contribution: {
@@ -62,7 +62,7 @@ export const ProjectsList = [
   {
     id: "gvn-app",
     imageUrl: "/images/projects/gvn-app/project-hero",
-    tags: "Design",
+    tags: ["B2C", "Mobile", "App", "UX/UI"],
     title: "GVN Supplement Tracker Mobile App",
     description: "GVN Supplement Tracker is a mobile app that helps users log their supplements and monitor daily wellness routines. The design emphasizes clarity, simple navigation, and a consistent visual style across screens.",
     contribution: {
@@ -87,7 +87,7 @@ export const ProjectsList = [
   {
     id: "dohn",
     imageUrl: "/images/projects/dohn/project-hero",
-    tags: "Design • HTML/CSS",
+    tags: ["B2B", "Web", "UX/UI", "Responsive"],
     title: "Dohn Construction",
     description: "Dohn Construction needed a refreshed website to modernize its online presence and better showcase services and past projects. The redesign improved clarity, usability, and strengthened the brand’s professional image for prospective clients.",
     contribution: {
@@ -115,7 +115,7 @@ export const ProjectsList = [
   {
     id: "mba",
     imageUrl: "/images/projects/mba/project-hero",
-    tags: "Design • HTML/CSS",
+    tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Marketing"],
     title: "Military Benefit Association",
     description: "Military Benefit Association needed a clear and responsive website to help users easily understand its benefits and services for service members, veterans, and their families, improving accessibility and communication across devices.",
     contribution: {
@@ -146,7 +146,7 @@ export const ProjectsList = [
   {
     id: "t2w",
     imageUrl: "/images/projects/t2w/project-hero",
-    tags: "Design • HTML/CSS",
+    tags: ["B2B", "Mobile", "UX/UI", "Branding", "Responsive", "Front-End", "Marketplace"],
     title: "Trades2Work",
     description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers. The outcome strengthened communication and made task coordination more intuitive across devices.",
     contribution: {
@@ -174,7 +174,7 @@ export const ProjectsList = [
   {
     id: "jtv",
     imageUrl: "/images/projects/jtv/project-hero",
-    tags: "Design • HTML/CSS",
+    tags: ["B2C", "Smart TV", "Web", "App", "UX/UI", "Admin", "Interactive"],
     title: "JaybirdTV",
     description: "JaybirdTV is a cross-platform streaming product designed to provide intuitive content discovery and consistent branding across TV, mobile, tablet, and desktop devices, enhancing user engagement with a cohesive streaming experience.",
     contribution: {
