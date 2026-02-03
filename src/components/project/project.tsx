@@ -54,13 +54,6 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
 
       <div className={`${styles.project__description} animate-on-scroll`}>
         <h2>{project.description}</h2>
-        {project.link ? (
-          <a href={project.link} target="_blank" rel="noopener noreferrer" className={`${styles.project__link} ${project.colorClass ? styles[project.colorClass] : ""}`}>
-            <span>{project.button ?? "Visit"}</span>
-          </a>
-        ) : (
-          <span className={styles.project__prototype}>Prototype</span>
-        )}
       </div>
 
       <div className={styles.project__details}>
@@ -68,13 +61,24 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
           <h3>CONTRIBUTION</h3>
           <ul className={styles.project__contribution}>
             {project.contribution.items.map((item, index) => (
-              <li key={index} className={styles["project__contribution-item"]}>{item}</li>
+              <li key={index} className={styles["project__contribution-item"]}>
+                {item}
+              </li>
             ))}
           </ul>
         </div>
         <div className={`${styles["project__details-item"]} animate-on-scroll`}>
           <h3>TIMELINE</h3>
           <p>{project.timeline}</p>
+        </div>
+        <div className={`animate-on-scroll`}>
+          {project.link ? (
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className={`${styles.project__link} ${project.colorClass ? styles[project.colorClass] : ""}`}>
+              <span>{project.button ?? "Visit"}</span>
+            </a>
+          ) : (
+            <span className={styles.project__prototype}>Prototype</span>
+          )}
         </div>
       </div>
 

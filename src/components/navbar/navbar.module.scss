@@ -1,5 +1,5 @@
 .navbar {
-  padding: 3rem;
+  padding: 2rem 4rem;
   background: var(--background);
   color: var(--foreground);
   display: flex;
@@ -20,10 +20,9 @@
     &-position {
       opacity: 1;
       max-width: 30rem;
-      margin-left: .5rem;
-      padding-left: .5rem;
+      margin-left: .8rem;
+      padding-left: .8rem;
       color: var(--grey);
-      font-size: 1.5rem;
       border-left: 1px solid var(--grey-50);
     }
 
@@ -54,7 +53,7 @@
       opacity: 0;
       transform: translateY(5px);
       transition: opacity .3s cubic-bezier(.645, .045, .355, 1),
-                  transform .3s cubic-bezier(.645, .045, .355, 1);
+        transform .3s cubic-bezier(.645, .045, .355, 1);
     }
 
     @media (hover: hover) {
@@ -77,5 +76,11 @@
     .navbar__logo-position {
       display: none;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 2rem;
   }
 }

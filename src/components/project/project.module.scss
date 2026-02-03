@@ -35,7 +35,7 @@
 
   figcaption {
     margin: 3rem auto 0;
-    padding: 0 3rem;
+    padding: 0 2rem;
     text-align: center;
     color: #767676;
     font-size: 1.3rem;
@@ -45,7 +45,12 @@
   }
 
   &:has(.project__image--smaller) {
-    max-width: 100rem;
+    max-width: 108rem;
+    padding: 0 4rem;
+
+    img {
+      border-radius: 5rem;
+    }
   }
 
   &:has(figcaption) {
@@ -54,15 +59,15 @@
 }
 
 .project__description {
-  margin: 12rem 0 0;
-  padding: 0 calc(2rem + 2.5vw);
+  margin: 12rem auto 0;
+  padding: 0 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 6rem;
+  max-width: 128rem;
 
   h2 {
-    flex-basis: 90rem;
     font-weight: normal;
   }
 }
@@ -95,10 +100,13 @@
   font-size: 2.8rem;
   cursor: pointer;
   align-self: flex-start;
+  display: block;
+  text-align: center;
 
   span {
     position: relative;
     z-index: 1;
+    text-align: center;
   }
 
   &::before {
@@ -241,10 +249,11 @@
 
 .project__details {
   width: 100%;
-  max-width: 90rem;
-  margin: 6rem 0 12rem;
-  padding: 0 calc(2rem + 2.5vw);
+  max-width: 128rem;
+  margin: 6rem auto 12rem;
+  padding: 0 4rem;
   display: flex;
+  justify-content: space-between;
   gap: 9rem;
 }
 
@@ -258,8 +267,7 @@
 }
 
 .project__details-item--contr {
-  flex-basis: 60rem;
-  flex-shrink: 1;
+  flex: 1;
 
   p {
     max-width: 43rem;
@@ -267,8 +275,8 @@
 }
 
 .project__navigation {
-  margin-bottom: 12rem;
-  padding: 0 3rem;
+  margin-bottom: 8rem;
+  padding: 0 4rem;
   text-align: center;
 
   h2 {
@@ -317,6 +325,7 @@
   .project__link,
   .project__prototype {
     font-size: 4vw;
+    margin-top: 2rem;
   }
 
   .project__image {
@@ -374,5 +383,18 @@
     figcaption {
       font-size: 1.2rem;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .project__description,
+  .project__image:has(.project__image--smaller),
+  .project__navigation,
+  .project__details {
+    padding: 0 2rem;
+  }
+
+  .project__description {
+    margin: 4rem 0 0;
   }
 }

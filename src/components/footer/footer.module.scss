@@ -1,16 +1,18 @@
 .footer {
-    padding: 3rem;
+    padding: 3rem 4rem;
     background: var(--background);
     color: var(--foreground);
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 6rem;
+    font-size: 1.6rem;
 
     &__social {
         display: flex;
         align-items: center;
         gap: 1rem;
+        font-size: 1.8rem;
 
         &-link {
             color: var(--foreground);
@@ -26,4 +28,10 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 3rem 2rem;
+  }
 }

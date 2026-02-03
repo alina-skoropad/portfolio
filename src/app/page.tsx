@@ -7,11 +7,9 @@ export default function Home() {
     <div className={styles.page}>
       <section className={styles.main}>
         <h1 className={styles.main__title}>
-          Hello! I'm Alina<span>, a Web Designer and an HTML/CSS developer</span>. I am passionate about both design and development. I strive to create clean, user-friendly, and timeless digital experiences that truly work. My focus on minimalism and simplicity enables me to design solutions that are both elegant and functional.
+          <span>Design.</span> <span>Development.</span> <span>Minimalism.</span> <span>Simplicity.</span>
         </h1>
         <div className={styles.main__projects}>
-          <h2 className="visually-hidden">My Projects</h2>
-          <h3 className={styles.main__subtitle}>recent works</h3>
           <Projects />
         </div>
       </section>
