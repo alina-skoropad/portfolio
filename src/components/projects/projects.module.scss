@@ -87,6 +87,8 @@
             height: auto;
             transform: scale(1);
             transition: transform 0.3s ease-in-out;
+            object-fit: cover;
+            height: 100%
         }
     }
 

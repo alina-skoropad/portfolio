@@ -58,7 +58,7 @@ export const ProjectsList = [
   },
   {
     id: "bam",
-    imageUrl: "/images/projects/bam/project-hero",
+    imageUrl: "/images/projects/bam/img-2",
     tags: ["B2B", "Web", "Redesign", "Responsive", "Front-End"],
     title: "BAM Broadband",
     description: "BAM Broadband needed a refreshed website to clearly communicate multiple service offerings while supporting marketing and sales teams, improving clarity and scalability for future marketing pages.",
@@ -75,7 +75,7 @@ export const ProjectsList = [
     ],
     additionalImages: [
       {src: "/images/projects/bam/img-1", alt: "BAM Mobile Screen"},
-      {src: "/images/projects/bam/img-2", alt: "BAM Mobile Screen"},
+      {src: "/images/projects/bam/project-hero", alt: "BAM Mobile Screen"},
       {src: "/images/projects/bam/img-3", alt: "BAM Mobile Screen"},
     ],
     timeline: "2024",
