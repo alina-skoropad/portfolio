@@ -77,7 +77,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
               <span>{project.button ?? "Visit"}</span>
             </a>
           ) : (
-            <span className={styles.project__prototype}>Prototype</span>
+            <span className={styles.project__prototype}></span>
           )}
         </div>
       </div>

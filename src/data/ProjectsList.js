@@ -63,7 +63,7 @@ export const ProjectsList = [
     title: "BAM Broadband",
     description: "BAM Broadband needed a refreshed website to clearly communicate multiple service offerings while supporting marketing and sales teams, improving clarity and scalability for future marketing pages.",
     contribution: {
-      items: ["Managed the redesign of a fully responsive B2B website following a brand refresh, ensuring visual consistency and scalability", "Re-structured site navigation and content hierarchy to improve service discoverability and reduce user friction", "Defined UI patterns and custom visual elements aligned with the updated brand system", "Implemented production-ready HTML/CSS for core pages and marketing landing pages"],
+      items: ["Managed the redesign of a fully responsive B2B website following a brand refresh, ensuring visual consistency and scalability", "Re-structured site navigation and content hierarchy to improve service discoverability and reduce user friction", "Defined UI patterns and custom visual elements aligned with the updated brand system", "Implemented HTML/CSS for core pages and marketing landing pages"],
     },
     galleryImages: [
       {src: "/images/projects/bam/project-mockup1", alt: "BAM Graphic Design", className: "project__image--smaller", figcaption: "Graphic Design"},
@@ -155,7 +155,7 @@ export const ProjectsList = [
     title: "Dohn Construction",
     description: "Dohn Construction needed a refreshed website to modernize its online presence and better showcase services and past projects. The redesign improved clarity, usability, and strengthened the brand’s professional image for prospective clients.",
     contribution: {
-      items: ["Redesigned the fully responsive website, enhancing navigation and showcasing services and projects", "Developed updated visual elements and graphics consistent with the refreshed brand identity", "Optimized content structure to improve clarity and user engagement", "Delivered production-ready HTML/CSS across all core pages, ensuring cross-device consistency"],
+      items: ["Redesigned the fully responsive website, enhancing navigation and showcasing services and projects", "Developed updated visual elements and graphics consistent with the refreshed brand identity", "Optimized content structure to improve clarity and user engagement", "Delivered  HTML/CSS across all core pages, ensuring cross-device consistency"],
     },
     galleryImages: [
       {src: "/images/projects/dohn/project-mockup1", alt: "Dohn Responsive Web-Design", figcaption: "Responsive Web-Design"},
@@ -184,7 +184,7 @@ export const ProjectsList = [
     title: "Trades2Work",
     description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers. The outcome strengthened communication and made task coordination more intuitive across devices.",
     contribution: {
-      items: ["Designed UI/UX for the mobile app to streamline time tracking and field workflows", "Created a responsive presentation website to showcase the app and its key features", "Developed cohesive branding and visual assets for a unified product experience", "Implemented production-ready HTML/CSS for web layouts and interfaces"],
+      items: ["Designed UI/UX for the mobile app to streamline time tracking and field workflows", "Created a responsive presentation website to showcase the app and its key features", "Developed cohesive branding and visual assets for a unified product experience", "Implemented  HTML/CSS for web layouts and interfaces"],
     },
     galleryImages: [
       {src: "/images/projects/t2w/project-mockup1", alt: "T2W Website / Mobile App", figcaption: "Website / Mobile App"},
@@ -205,5 +205,26 @@ export const ProjectsList = [
     additionalPosition: 1,
     button: "View Promo",
   },
-  
+  {
+    id: "locast-ops-dashboard",
+    imageUrl: "/images/projects/locast-ops-dashboard/project-hero",
+    tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Dashboard"],
+    title: "Locast Ops Dashboard",
+    description: "Locast needed a solution to streamline operations and provide real-time visibility into their field operations. The dashboard was designed to be intuitive and accessible across devices.",
+    contribution: {
+      items: ["Designed UI/UX for the dashboard to provide real-time visibility into field operations", "Created a responsive website to showcase the dashboard and its key features", "Developed visual assets for a unified product experience", "Implemented  HTML/CSS"],
+    },
+    galleryImages: [
+      {src: "/images/projects/locast-ops-dashboard/project-mockup1", alt: "Locast Ops Dashboard", figcaption: "Dashboard"},
+      {src: "/images/projects/locast-ops-dashboard/project-mockup2", alt: "Locast Ops Dashboard Popups", className: "project__image--smaller", figcaption: "Popups"},
+      {src: "/images/projects/locast-ops-dashboard/project-mockup3", alt: "Locast Ops Channel Popup", figcaption: "Channel"},
+    ],
+    additionalImages: [
+      {src: "/images/projects/locast-ops-dashboard/img-1", alt: "Locast Ops Dashboard"},
+      {src: "/images/projects/locast-ops-dashboard/img-2", alt: "Locast Ops Dashboard"},
+      {src: "/images/projects/locast-ops-dashboard/img-3", alt: "Locast Ops Dashboard"},
+    ],
+    timeline: "2020",
+    additionalPosition: 1,
+  },
 ];
