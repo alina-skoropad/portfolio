@@ -84,7 +84,7 @@ export const ProjectsList = [
     additionalPosition: 2,
     button: "Visit Website",
   },
- {
+  {
     id: "mba",
     imageUrl: "/images/projects/mba/project-hero",
     tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Marketing"],
@@ -176,7 +176,7 @@ export const ProjectsList = [
     additionalPosition: 1,
     button: "Visit Website",
   },
- 
+
   {
     id: "t2w",
     imageUrl: "/images/projects/t2w/project-hero",
@@ -208,11 +208,11 @@ export const ProjectsList = [
   {
     id: "locast-ops-dashboard",
     imageUrl: "/images/projects/locast-ops-dashboard/project-hero",
-    tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Dashboard"],
+    tags: ["B2C", "Web", "UX/UI", "Front-End", "Dashboard"],
     title: "Locast Ops Dashboard",
-    description: "Locast needed a solution to streamline operations and provide real-time visibility into their field operations. The dashboard was designed to be intuitive and accessible across devices.",
+    description: "Locast needed a solution to streamline operations and provide real-time visibility into their field activities. The Ops Dashboard improved monitoring capabilities and enhanced decision-making.",
     contribution: {
-      items: ["Designed UI/UX for the dashboard to provide real-time visibility into field operations", "Created a responsive website to showcase the dashboard and its key features", "Developed visual assets for a unified product experience", "Implemented  HTML/CSS"],
+      items: ["Designed UI/UX for the dashboard to monitor and manage field activities in real-time", "Developed visual assets for a unified product experience", "Implemented HTML/CSS code"],
     },
     galleryImages: [
       {src: "/images/projects/locast-ops-dashboard/project-mockup1", alt: "Locast Ops Dashboard", figcaption: "Dashboard"},
