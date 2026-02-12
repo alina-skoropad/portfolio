@@ -180,7 +180,7 @@ export const ProjectsList = [
   {
     id: "t2w",
     imageUrl: "/images/projects/t2w/project-hero",
-    tags: ["B2B", "Mobile", "UX/UI", "Branding", "Responsive", "Front-End", "Marketplace"],
+    tags: ["B2B", "Mobile", "UX/UI", "Branding", "Responsive", "Front-End"],
     title: "Trades2Work",
     description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers. The outcome strengthened communication and made task coordination more intuitive across devices.",
     contribution: {
