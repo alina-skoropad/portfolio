@@ -51,10 +51,7 @@ export const ProjectsList = [
       {src: "/images/projects/gvn/img-3", alt: "GVN Mobile Screen"},
     ],
     timeline: "2024-2025",
-    link: "https://www.greenvalleynaturals.com",
-    colorClass: "project__link--gvn-green",
     additionalPosition: 1,
-    button: "Visit Website",
   },
   {
     id: "bam",

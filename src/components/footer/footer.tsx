@@ -11,8 +11,8 @@ const Footer = () => {
           Linkedin
         </Link>
         <span className={styles['footer__social-separator']}>/</span>
-        <Link className={styles['footer__social-link']} href="https://www.instagram.com/alina_skoropad/" target="_blank" rel="noopener noreferrer">
-          Instagram
+        <Link className={styles['footer__social-link']} href="https://dribbble.com/vovne" target="_blank" rel="noopener noreferrer">
+          Dribbble
         </Link>
       </nav>
 
