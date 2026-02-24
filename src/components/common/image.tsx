@@ -23,7 +23,7 @@ const Image: FC<ImageProps> = ({
   loading = "lazy",
   decoding = "async",
   priority = false,
-  sizes = "(max-width: 768px) 100vw, 1280px",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1440px) 100vw, 2560px",
   srcSetWidths = [320, 480, 768, 1024, 1280, 1920, 2560],
   ...rest
 }) => {
@@ -33,10 +33,12 @@ const Image: FC<ImageProps> = ({
       .map(w => `${src}-${w}w.${format} ${w}w`)
       .join(", "); 
 
+  const typeFallback = formatFallback === "jpg" ? "image/jpeg" : `image/${formatFallback}`;
+
   return (
     <picture>
       <source srcSet={generateSrcSet("webp")} type="image/webp" sizes={sizes} />
-      <source srcSet={generateSrcSet(formatFallback)} type={`image/${formatFallback}`} sizes={sizes} />
+      <source srcSet={generateSrcSet(formatFallback)} type={typeFallback} sizes={sizes} />
       <img
         src={`${src}-${width}w.${formatFallback}`}
         alt={alt}
