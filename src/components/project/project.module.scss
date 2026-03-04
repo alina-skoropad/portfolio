@@ -6,6 +6,10 @@
     display: block;
     height: auto;
   }
+
+  p {
+    line-height: 1.6;
+  }
 }
 
 .project__hero {
@@ -64,7 +68,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 3rem;
   max-width: 128rem;
 
   h2 {
@@ -78,7 +82,7 @@
 }
 
 .project__contribution-item {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 
   &::marker {
     font-size: 0.8em;
@@ -249,12 +253,12 @@
 
 .project__details {
   width: 100%;
-  max-width: 128rem;
   margin: 6rem auto 12rem;
   padding: 0 4rem;
   display: flex;
   justify-content: space-between;
   gap: 9rem;
+  max-width: 128rem;
 }
 
 .project__details-item {
@@ -270,7 +274,7 @@
   flex: 1;
 
   p {
-    max-width: 43rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -312,7 +316,7 @@
 
 @media (max-width: 1400px) {
   .project__description {
-    margin: 8rem 0 0;
+    margin: 8rem auto 0;
   }
 
   .project__details {

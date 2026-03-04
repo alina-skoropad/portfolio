@@ -4,7 +4,9 @@ export const ProjectsList = [
     imageUrl: "/images/projects/gvn-app/project-hero",
     tags: ["B2C", "Mobile", "App", "UX/UI"],
     title: "GVN Supplement Tracker Mobile App",
-    description: "GVN Supplement Tracker is a mobile app that helps users log their supplements and monitor daily wellness routines. The design emphasizes clarity, simple navigation, and a consistent visual style across screens.",
+    description: "GVN Supplement Tracker is a mobile app concept for tracking supplement intake, setting reminders, and discovering new wellness products.",
+    process: "The app was an internal initiative — a design concept proposed to the client to extend the GVN digital ecosystem beyond the website.",
+    role: "I designed the full mobile experience from scratch, focusing on simple daily flows for logging supplements and tracking progress, keeping the visual style consistent with the GVN brand.",
     contribution: {
       items: ["Designed mobile screens focusing on clear navigation and ease of use", "Streamlined UX flows for daily supplement logging and progress tracking", "Built clean, consistent UI elements that make the app simple and engaging"],
     },
@@ -29,7 +31,9 @@ export const ProjectsList = [
     imageUrl: "/images/projects/gvn/project-hero",
     tags: ["B2B", "Web", "E-commerce", "Marketing", "Responsive", "Front-End"],
     title: "Green Valley Naturals",
-    description: "Green Valley Naturals needed a clean, intuitive online presence to improve product discoverability and subscription conversions, strengthening brand visibility and customer engagement.",
+    description: "GVN needed a clear digital presence, starting with a blog redesign and expanding to a full e-commerce platform with integrated checkout.",
+    process: "The project evolved in stages. First the blog, then the main site to match the new visual direction, then landing pages aligned with a product packaging refresh, and finally migrating checkout from a third-party service to the site itself.",
+    role: "I translated the client's vision of a clean, beautiful and intuitive product into design at each stage, adapting as the brand evolved.",
     contribution: {
       items: ["Designed and developed a responsive e‑commerce website", "Refined information architecture to guide users through product discovery and subscription flow", "Created landing pages, banners, email templates, and surveys to support promotions", "Implemented HTML/CSS for core pages and checkout experience"],
     },
@@ -58,7 +62,9 @@ export const ProjectsList = [
     imageUrl: "/images/projects/bam/img-2",
     tags: ["B2B", "Web", "Redesign", "Responsive", "Front-End"],
     title: "BAM Broadband",
-    description: "BAM Broadband needed a refreshed website to clearly communicate multiple service offerings while supporting marketing and sales teams, improving clarity and scalability for future marketing pages.",
+    description: "BAM Broadband needed a refreshed website to clearly communicate multiple service offerings after merging two separate brand identities into one.",
+    process: "The project was a full redesign based on an updated brandbook. Working from existing site structures, I defined new UI patterns and visual elements to create a consistent experience across all pages.",
+    role: "I translated the updated brand identity into a scalable web design, restructuring navigation and content hierarchy to improve clarity for both users and the marketing team.",
     contribution: {
       items: ["Managed the redesign of a fully responsive B2B website following a brand refresh, ensuring visual consistency and scalability", "Re-structured site navigation and content hierarchy to improve service discoverability and reduce user friction", "Defined UI patterns and custom visual elements aligned with the updated brand system", "Implemented HTML/CSS for core pages and marketing landing pages"],
     },
@@ -87,6 +93,8 @@ export const ProjectsList = [
     tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Marketing"],
     title: "Military Benefit Association",
     description: "Military Benefit Association needed a clear and responsive website to help users easily understand its benefits and services for service members, veterans, and their families, improving accessibility and communication across devices.",
+    process: "",
+    role: "",
     contribution: {
       items: ["Designed a fully responsive website optimized for desktop and mobile screens to enhance accessibility", "Developed UX/UI solutions that made benefits and service offerings easy to understand", "Created graphic assets and campaign visuals including emails, landing content, and brochures", "Implemented HTML/CSS coding across pages and email templates to ensure consistency and performance"],
     },
@@ -118,6 +126,8 @@ export const ProjectsList = [
     tags: ["B2C", "Smart TV", "Web", "App", "UX/UI", "Admin", "Interactive"],
     title: "JaybirdTV",
     description: "JaybirdTV is a cross-platform streaming product designed to provide intuitive content discovery and consistent branding across TV, mobile, tablet, and desktop devices, enhancing user engagement with a cohesive streaming experience.",
+    process: "",
+    role: "",
     contribution: {
       items: ["Designed cross-platform UI for TV, tablet, mobile, and desktop, creating a cohesive interface across all devices", "Created the admin panel to manage branding, ensuring consistent visual identity across platforms", "Designed visual elements and graphics that maintain clarity and consistency throughout the product", "Implemented responsive HTML/CSS layouts, delivering functional and accessible interfaces"],
     },
@@ -151,6 +161,8 @@ export const ProjectsList = [
     tags: ["B2B", "Web", "UX/UI", "Responsive"],
     title: "Dohn Construction",
     description: "Dohn Construction needed a refreshed website to modernize its online presence and better showcase services and past projects. The redesign improved clarity, usability, and strengthened the brand’s professional image for prospective clients.",
+    process: "",
+    role: "",
     contribution: {
       items: ["Redesigned the fully responsive website, enhancing navigation and showcasing services and projects", "Developed updated visual elements and graphics consistent with the refreshed brand identity", "Optimized content structure to improve clarity and user engagement", "Delivered  HTML/CSS across all core pages, ensuring cross-device consistency"],
     },
@@ -180,6 +192,8 @@ export const ProjectsList = [
     tags: ["B2B", "Mobile", "UX/UI", "Branding", "Responsive", "Front-End"],
     title: "Trades2Work",
     description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers. The outcome strengthened communication and made task coordination more intuitive across devices.",
+    process: "",
+    role: "",
     contribution: {
       items: ["Designed UI/UX for the mobile app to streamline time tracking and field workflows", "Created a responsive presentation website to showcase the app and its key features", "Developed cohesive branding and visual assets for a unified product experience", "Implemented  HTML/CSS for web layouts and interfaces"],
     },
@@ -208,6 +222,8 @@ export const ProjectsList = [
     tags: ["B2C", "Web", "UX/UI", "Front-End", "Dashboard"],
     title: "Locast Ops Dashboard",
     description: "Locast needed a solution to streamline operations and provide real-time visibility into their field activities. The Ops Dashboard improved monitoring capabilities and enhanced decision-making.",
+    process: "",
+    role: "",
     contribution: {
       items: ["Designed UI/UX for the dashboard to monitor and manage field activities in real-time", "Developed visual assets for a unified product experience", "Implemented HTML/CSS code"],
     },

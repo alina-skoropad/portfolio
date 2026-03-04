@@ -19,6 +19,8 @@ type Project = {
   id: string;
   title: string;
   description: string;
+  process: string;
+  role: string;
   contribution: {
     items: string[];
   };
@@ -54,11 +56,14 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
 
       <div className={`${styles.project__description} animate-on-scroll`}>
         <h2>{project.description}</h2>
+        <p>{project.process}</p>
+       
       </div>
 
       <div className={styles.project__details}>
         <div className={`${styles["project__details-item"]} ${styles["project__details-item--contr"]} animate-on-scroll`}>
-          <h3>CONTRIBUTION</h3>
+          <h3>MY ROLE</h3>
+           <p>{project.role}</p>
           <ul className={styles.project__contribution}>
             {project.contribution.items.map((item, index) => (
               <li key={index} className={styles["project__contribution-item"]}>
