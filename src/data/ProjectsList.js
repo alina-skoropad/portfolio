@@ -211,7 +211,7 @@ export const ProjectsList = [
       {src: "/images/projects/t2w/img-3", alt: "MBA Mobile Screen"},
     ],
     timeline: "2021-2022",
-    link: "https://youtube.com/embed/Dmw9NHjDQXs?si=JOlDxB1gbAeKO6uc",
+    link: "https://www.youtube.com/watch?v=Dmw9NHjDQXs",
     colorClass: "project__link--t2w-dark-blue",
     additionalPosition: 1,
     button: "View Promo",
