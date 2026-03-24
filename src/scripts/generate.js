@@ -2,8 +2,8 @@ import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const inputDir = "public/images/projects/locast-ops-dashboard"; 
-const outputDir = "public/images/projects/locast-ops-dashboard";
+const inputDir = "public/images/projects/kens"; 
+const outputDir = "public/images/projects/kens";
 
 const breakpoints = [320, 480, 768, 1024, 1280, 1920, 2560];
 const formats = ["jpg", "webp"];

@@ -121,6 +121,33 @@ export const ProjectsList = [
     button: "Visit Website",
   },
   {
+    id: "kens",
+    imageUrl: "/images/projects/kens/project-hero",
+    tags: ["B2B", "Internal Tool", "Dashboard", "Front-End", "Mobile-Responsive"],
+    title: "Ken's Sales Portal",
+    description: "Internal B2B platform for sales teams — product catalog, spec sheets, recipe builders, and order management.",
+    process: "I joined the project with a defined home page direction and expanded the visual style into a full UI system across all modules, including complete mobile adaptation.",
+    role: "UI/UX design, component system, and HTML/CSS implementation.",
+    contribution: {
+      items: ["Designed data-heavy interfaces: recipe builders, spec sheets, and order management", "Adapted complex desktop layouts (tables, filters, grids) for mobile and tablet", "Built a modular component system based on the initial home page aesthetic", "Implemented responsive front-end (HTML/CSS) for field-based sales teams"],
+    },
+    galleryImages: [
+      {src: "/images/projects/kens/project-mockup1", alt: "Ken's Sales Portal Main Dashboard", figcaption: "Main Sales Dashboard"},
+      {src: "/images/projects/kens/project-mockup2", alt: "Mobile Screens", className: "project__image--smaller", figcaption: "Mobile Screens"},
+      {src: "/images/projects/kens/project-mockup3", alt: "Mobile Screens", figcaption: "Mobile Screens"},
+      {src: "/images/projects/kens/project-mockup4", alt: "Desktop Screen", className: "project__image--smaller", figcaption: "Desktop Screen"},
+      {src: "/images/projects/kens/project-mockup5", alt: "Desktop Screens", figcaption: "Desktop Screens"},
+      {src: "/images/projects/kens/project-mockup6", alt: "Desktop Screens", className: "project__image--smaller", figcaption: "Desktop Screens"},
+    ],
+    additionalImages: [
+      {src: "/images/projects/kens/img-3", alt: "Product List View"},
+      {src: "/images/projects/kens/img-1", alt: "Product Image Assets Library"},
+      {src: "/images/projects/kens/img-2", alt: "Portal Home Navigation"},
+    ],
+    timeline: "2020-2021",
+    additionalPosition: 0,
+  },
+  {
     id: "jtv",
     imageUrl: "/images/projects/jtv/project-hero",
     tags: ["B2C", "Smart TV", "Web", "App", "UX/UI", "Admin", "Interactive"],
@@ -185,7 +212,6 @@ export const ProjectsList = [
     additionalPosition: 1,
     button: "Visit Website",
   },
-
   {
     id: "t2w",
     imageUrl: "/images/projects/t2w/project-hero",
