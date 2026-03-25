@@ -29,7 +29,7 @@ export const ProjectsList = [
   {
     id: "gvn",
     imageUrl: "/images/projects/gvn/project-hero",
-    tags: ["B2B", "Web", "E-commerce", "Marketing", "Responsive", "Front-End"],
+    tags: ["B2С", "Web", "E-commerce", "Marketing", "Responsive", "Front-End"],
     title: "Green Valley Naturals",
     description: "GVN needed a clear digital presence, starting with a blog redesign and expanding to a full e-commerce platform with integrated checkout.",
     process: "The project evolved in stages. First the blog, then the main site to match the new visual direction, then landing pages aligned with a product packaging refresh, and finally migrating checkout from a third-party service to the site itself.",
@@ -123,7 +123,7 @@ export const ProjectsList = [
   {
     id: "kens",
     imageUrl: "/images/projects/kens/project-hero",
-    tags: ["B2B", "Internal Tool", "Dashboard", "Front-End", "Mobile-Responsive"],
+    tags: ["B2B", "Internal Tool", "Dashboard", "Responsive", "Front-End"],
     title: "Ken's Sales Portal",
     description: "Internal B2B platform for sales teams — product catalog, spec sheets, recipe builders, and order management.",
     process: "I joined the project with a defined home page direction and expanded the visual style into a full UI system across all modules, including complete mobile adaptation.",
