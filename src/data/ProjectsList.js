@@ -234,7 +234,7 @@ export const ProjectsList = [
     additionalImages: [
       {src: "/images/projects/t2w/img-1", alt: "T2W Mobile App Screen"},
       {src: "/images/projects/t2w/img-2", alt: "T2W Mobile App Screen"},
-      {src: "/images/projects/t2w/img-3", alt: "MBA Mobile Screen"},
+      {src: "/images/projects/t2w/img-3", alt: "T2W Mobile App Screen"},
     ],
     timeline: "2021-2022",
     link: "https://www.youtube.com/watch?v=Dmw9NHjDQXs",
