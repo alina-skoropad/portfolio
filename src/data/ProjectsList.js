@@ -93,8 +93,8 @@ export const ProjectsList = [
     tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Marketing"],
     title: "Military Benefit Association",
     description: "Military Benefit Association needed a clear and responsive website to help users easily understand its benefits and services for service members, veterans, and their families, improving accessibility and communication across devices.",
-    process: "",
-    role: "",
+    process: "Long-term engagement across multiple redesign and campaign cycles, adapting the site as the brand and content evolved.",
+    role: "UI/UX design, graphic assets, and HTML/CSS implementation.",
     contribution: {
       items: ["Designed a fully responsive website optimized for desktop and mobile screens to enhance accessibility", "Developed UX/UI solutions that made benefits and service offerings easy to understand", "Created graphic assets and campaign visuals including emails, landing content, and brochures", "Implemented HTML/CSS coding across pages and email templates to ensure consistency and performance"],
     },
@@ -150,13 +150,13 @@ export const ProjectsList = [
   {
     id: "jtv",
     imageUrl: "/images/projects/jtv/project-hero",
-    tags: ["B2C", "Smart TV", "Web", "App", "UX/UI", "Admin", "Interactive"],
+    tags: ["B2B", "B2C", "Smart TV", "Mobile", "Web", "Admin", "White-label", "CMS"],
     title: "JaybirdTV",
-    description: "JaybirdTV is a cross-platform streaming product designed to provide intuitive content discovery and consistent branding across TV, mobile, tablet, and desktop devices, enhancing user engagement with a cohesive streaming experience.",
-    process: "",
-    role: "",
+    description: "JaybirdTV is a white-label streaming platform for live TV and on-demand video, designed to work across Smart TV, mobile, tablet, and web, with a full CMS for station operators.",
+    process: "The platform needed one design language across radically different screen contexts. A TV UI navigated by remote, touch-based mobile and tablet apps, and a desktop admin panel each required its own interaction patterns while staying visually consistent.",
+    role: "UI/UX design across all platforms and admin CMS, and HTML/CSS implementation.",
     contribution: {
-      items: ["Designed cross-platform UI for TV, tablet, mobile, and desktop, creating a cohesive interface across all devices", "Created the admin panel to manage branding, ensuring consistent visual identity across platforms", "Designed visual elements and graphics that maintain clarity and consistency throughout the product", "Implemented responsive HTML/CSS layouts, delivering functional and accessible interfaces"],
+      items: ["Designed consumer UI for Smart TV, iOS/Android, tablet, and web with a shared visual system", "Built remote-friendly TV interface with keyboard-based search and channel navigation", "Designed the admin CMS for managing users, tags, categories, input sources, and assets", "Supported white-label customization with same platform adapted for different station branding", "Implemented responsive HTML/CSS layouts"],
     },
     galleryImages: [
       {src: "/images/projects/jtv/project-mockup1", alt: "JTV Tablet and Mobile App Screens", className: "project__image--smaller"},
@@ -187,11 +187,11 @@ export const ProjectsList = [
     imageUrl: "/images/projects/dohn/project-hero",
     tags: ["B2B", "Web", "UX/UI", "Responsive"],
     title: "Dohn Construction",
-    description: "Dohn Construction needed a refreshed website to modernize its online presence and better showcase services and past projects. The redesign improved clarity, usability, and strengthened the brand’s professional image for prospective clients.",
-    process: "",
-    role: "",
+    description: "Dohn Construction needed a refreshed website to modernize its online presence and better showcase services and past projects.",
+    process: "Working from the existing site structure and an updated brand direction, I redesigned the full site — restructuring content, refreshing visuals, and ensuring consistency across all pages.",
+    role: "UI/UX design, visual assets, and HTML/CSS implementation.",
     contribution: {
-      items: ["Redesigned the fully responsive website, enhancing navigation and showcasing services and projects", "Developed updated visual elements and graphics consistent with the refreshed brand identity", "Optimized content structure to improve clarity and user engagement", "Delivered  HTML/CSS across all core pages, ensuring cross-device consistency"],
+      items: ["Redesigned the fully responsive website, enhancing navigation and showcasing services and projects", "Developed updated visual elements and graphics consistent with the refreshed brand identity", "Optimized content structure to improve clarity and user engagement", "Delivered HTML/CSS across all core pages, ensuring cross-device consistency"],
     },
     galleryImages: [
       {src: "/images/projects/dohn/project-mockup1", alt: "Dohn Responsive Web-Design", figcaption: "Responsive Web-Design"},
@@ -215,13 +215,13 @@ export const ProjectsList = [
   {
     id: "locast",
     imageUrl: "/images/projects/locast/project-hero",
-    tags: ["OTT", "B2C", "Cross-platform", "Smart TV", "Web", "Marketing", "E-commerce"],
+    tags: ["B2C", "Cross-platform", "Smart TV", "Web", "UX/UI", "Branding", "Marketing"],
     title: "Locast",
-    description: "Locast was a streaming service for watching local TV channels across 30+ US markets.",
-    process: "The work focused on the TV guide for remotes and touchscreens, device activation via code, and geofencing. I also handled all the branding and marketing materials.",
-    role: "UI/UX design for all app platforms (Mobile, Tablet, Smart TV) and marketing.",
+    description: "Locast was a non-profit streaming service for watching local TV channels across 30+ US markets, serving 3M+ users.",
+    process: "The work covered the full product experience across all platforms and touchpoints, from the core TV guide and player to device activation, geofencing, donation flows, and all marketing materials.",
+    role: "UI/UX design across all platforms (Mobile, Tablet, Smart TV, Web) and marketing.",
     contribution: {
-      items: ["UI/UX for Smart TV (Roku, Apple TV, Amazon Fire TV), mobile, and tablet", "TV guide for navigating live broadcast schedules", "User flows for device activation and geofencing-based access", "Branding and marketing assets: email templates, banners, and landing pages", "Visual synchronization between the apps and the web platform"],
+      items: ["Redesigned the logo and extended the brand identity with an accent color system", "Built the design system in Sketch with a full component library synced via Zeplin", "Designed the full product UI from scratch across iOS, Android, tablet, Smart TV, and web", "Produced email templates, landing pages, and print banners for marketing campaigns", "Implemented responsive HTML/CSS layouts"],
     },
     galleryImages: [
       {src: "/images/projects/locast/project-mockup1", alt: "Locast Mobile App", className: "project__image--smaller", figcaption: "Mobile App"},
@@ -235,7 +235,7 @@ export const ProjectsList = [
       {src: "/images/projects/locast/project-mockup9", alt: "Locast Desktop EPG", className: "project__image--smaller", figcaption: "Desktop EPG"},
       {src: "/images/projects/locast/project-mockup10", alt: "Locast Landing Page", figcaption: "Landing Page"},
       {src: "/images/projects/locast/project-mockup12", alt: "Locast Emails", figcaption: "Emails"},
-      {src: "/images/projects/locast/project-mockup13", alt: "Locast BusinessCards", figcaption: "Business Cards"},
+      {src: "/images/projects/locast/project-mockup13", alt: "Locast Cards", figcaption: "Cards"},
     ],
     additionalImages: [
       {src: "/images/projects/locast/img-1", alt: "Locast Smart TV"},
@@ -248,13 +248,13 @@ export const ProjectsList = [
   {
     id: "locast-ops-dashboard",
     imageUrl: "/images/projects/locast-ops-dashboard/project-hero",
-    tags: ["B2C", "Web", "UX/UI", "Front-End", "Dashboard"],
+    tags: ["Internal Tool", "Dashboard", "Web", "UX/UI", "Front-End"],
     title: "Locast Ops Dashboard",
-    description: "Locast needed a solution to streamline operations and provide real-time visibility into their field activities. The Ops Dashboard improved monitoring capabilities and enhanced decision-making.",
-    process: "",
-    role: "",
+    description: "An internal real-time monitoring tool for the Locast ops team, providing live visibility into antenna status, broadcast health, and channel activity across all US markets.",
+    process: "Designed from scratch as a standalone internal tool, built to give the ops team instant access to live status data across all monitored locations.",
+    role: "UI/UX design and HTML/CSS implementation.",
     contribution: {
-      items: ["Designed UI/UX for the dashboard to monitor and manage field activities in real-time", "Developed visual assets for a unified product experience", "Implemented HTML/CSS code"],
+      items: ["Designed map-based dashboard showing antenna locations and signal status across 25+ US markets", "Built city-level detail panels with active channel counts, fatal error alerts, and station technical info", "Designed channel detail view with real-time status, technical specs, and user-reported problem graph", "Implemented HTML/CSS for the full dashboard"],
     },
     galleryImages: [
       {src: "/images/projects/locast-ops-dashboard/project-mockup1", alt: "Locast Ops Dashboard", figcaption: "Dashboard"},
@@ -274,11 +274,11 @@ export const ProjectsList = [
     imageUrl: "/images/projects/t2w/project-hero",
     tags: ["B2B", "Mobile", "UX/UI", "Branding", "Responsive", "Front-End"],
     title: "Trades2Work",
-    description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers. The outcome strengthened communication and made task coordination more intuitive across devices.",
-    process: "",
-    role: "",
+    description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers.",
+    process: "The project covered both the mobile app and a presentation website — designed in parallel to ensure the product and its public face felt like one cohesive system.",
+    role: "UI/UX design for mobile app and web, branding, and HTML/CSS implementation.",
     contribution: {
-      items: ["Designed UI/UX for the mobile app to streamline time tracking and field workflows", "Created a responsive presentation website to showcase the app and its key features", "Developed cohesive branding and visual assets for a unified product experience", "Implemented  HTML/CSS for web layouts and interfaces"],
+      items: ["Designed UI/UX for the mobile app to streamline time tracking and field workflows", "Created a responsive presentation website to showcase the app and its key features", "Developed cohesive branding and visual assets for a unified product experience", "Implemented HTML/CSS for web layouts and interfaces"],
     },
     galleryImages: [
       {src: "/images/projects/t2w/project-mockup1", alt: "T2W Website / Mobile App", figcaption: "Website / Mobile App"},
