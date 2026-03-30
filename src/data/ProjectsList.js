@@ -221,7 +221,7 @@ export const ProjectsList = [
     process: "The work covered the full product experience across all platforms and touchpoints, from the core TV guide and player to device activation, geofencing, donation flows, and all marketing materials.",
     role: "UI/UX design across all platforms (Mobile, Tablet, Smart TV, Web) and marketing.",
     contribution: {
-      items: ["Redesigned the logo and extended the brand identity with an accent color system", "Built the design system in Sketch with a full component library synced via Zeplin", "Designed the full product UI from scratch across iOS, Android, tablet, Smart TV, and web", "Produced email templates, landing pages, and print banners for marketing campaigns", "Implemented responsive HTML/CSS layouts"],
+      items: ["Redesigned the logo and extended the brand identity with an accent color system", "Built the design system in Sketch with a full component library synced via Zeplin", "Designed the full product UI from scratch across iOS, Android, tablet, Smart TV, and web", "Produced email templates, landing pages, and print banners for marketing campaigns", "Implemented HTML/CSS for the initial website version, landing pages and emails"],
     },
     galleryImages: [
       {src: "/images/projects/locast/project-mockup1", alt: "Locast Mobile App", className: "project__image--smaller", figcaption: "Mobile App"},
