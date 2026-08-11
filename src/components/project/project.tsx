@@ -96,7 +96,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
 
       <div className={styles.project__details}>
         <motion.div className={`${styles["project__details-item"]} ${styles["project__details-item--contr"]}`} initial="hidden" whileInView="visible" viewport={{once: true, margin: "-100px"}} variants={fadeInUp}>
-          <h3>MY ROLE</h3>
+          <h3>My role</h3>
           <p>{project.role}</p>
           <motion.ul className={styles.project__contribution} variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{once: true}}>
             {project.contribution.items.map((item, index) => (
@@ -108,7 +108,7 @@ export default function ProjectDetails({project, nextProject}: ProjectDetailsPro
         </motion.div>
 
         <motion.div className={styles["project__details-item"]} initial="hidden" whileInView="visible" viewport={{once: true, margin: "-100px"}} variants={fadeInUp}>
-          <h3>TIMELINE</h3>
+          <h3>Timeline</h3>
           <p>{project.timeline}</p>
         </motion.div>
 
