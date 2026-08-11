@@ -35,7 +35,6 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
             <motion.div
               className={styles.projects__list_item}
               key={project.id}
-              layout="position"
               initial={{ opacity: 0, scale: 0.96, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 15 }}

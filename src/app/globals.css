@@ -88,7 +88,7 @@ h3 {
   color: var(--grey);
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 
 .serif_accent {

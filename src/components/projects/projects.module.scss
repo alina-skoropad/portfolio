@@ -50,6 +50,7 @@
       display: flex;
       align-items: center;
       gap: 0.8rem;
+       transition: color 0.3s ease;
 
       .arrow_wrapper {
         display: inline-flex;
