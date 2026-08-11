@@ -2,7 +2,7 @@ export const ProjectsList = [
   {
     id: "gvn-app",
     imageUrl: "/images/projects/gvn-app/project-hero",
-    tags: ["B2C", "Mobile", "App", "UX/UI"],
+    tags: ["Design", "App"],
     title: "GVN Supplement Tracker Mobile App",
     description: "GVN Supplement Tracker is a mobile app concept for tracking supplement intake, setting reminders, and discovering new wellness products.",
     process: "The app was an internal initiative — a design concept proposed to the client to extend the GVN digital ecosystem beyond the website.",
@@ -29,7 +29,7 @@ export const ProjectsList = [
   {
     id: "gvn",
     imageUrl: "/images/projects/gvn/project-hero",
-    tags: ["B2С", "Web", "E-commerce", "Marketing", "Responsive", "Front-End"],
+    tags: ["Design", "Code", "Web", "B2С", "E-commerce", "Marketing"],
     title: "Green Valley Naturals",
     description: "GVN needed a clear digital presence, starting with a blog redesign and expanding to a full e-commerce platform with integrated checkout.",
     process: "The project evolved in stages. First the blog, then the main site to match the new visual direction, then landing pages aligned with a product packaging refresh, and finally migrating checkout from a third-party service to the site itself.",
@@ -60,7 +60,7 @@ export const ProjectsList = [
   {
     id: "bam",
     imageUrl: "/images/projects/bam/img-2",
-    tags: ["B2B", "Web", "Redesign", "Responsive", "Front-End"],
+    tags: ["Design", "Code", "Web", "B2B"],
     title: "BAM Broadband",
     description: "BAM Broadband needed a refreshed website to clearly communicate multiple service offerings after merging two separate brand identities into one.",
     process: "The project was a full redesign based on an updated brandbook. Working from existing site structures, I defined new UI patterns and visual elements to create a consistent experience across all pages.",
@@ -90,7 +90,7 @@ export const ProjectsList = [
   {
     id: "mba",
     imageUrl: "/images/projects/mba/project-hero",
-    tags: ["B2C", "Web", "UX/UI", "Responsive", "Front-End", "Marketing"],
+    tags: ["Design", "Code", "Web", "B2C", "Marketing"],
     title: "Military Benefit Association",
     description: "Military Benefit Association needed a clear and responsive website to help users easily understand its benefits and services for service members, veterans, and their families, improving accessibility and communication across devices.",
     process: "Long-term engagement across multiple redesign and campaign cycles, adapting the site as the brand and content evolved.",
@@ -123,7 +123,7 @@ export const ProjectsList = [
   {
     id: "kens",
     imageUrl: "/images/projects/kens/project-hero",
-    tags: ["B2B", "Internal Tool", "Dashboard", "Responsive", "Front-End"],
+    tags: ["Design", "Code", "Web", "B2B", "Dashboard"],
     title: "Ken's Sales Portal",
     description: "Internal B2B platform for sales teams — product catalog, spec sheets, recipe builders, and order management.",
     process: "I joined the project with a defined home page direction and expanded the visual style into a full UI system across all modules, including complete mobile adaptation.",
@@ -150,13 +150,13 @@ export const ProjectsList = [
   {
     id: "jtv",
     imageUrl: "/images/projects/jtv/project-hero",
-    tags: ["B2B", "B2C", "Smart TV", "Mobile", "Web", "Admin", "White-label", "CMS"],
+    tags: ["Design", "Code", "Web", "App", "B2B", "B2C", "Admin", "Branding"],
     title: "JaybirdTV",
     description: "JaybirdTV is a white-label streaming platform for live TV and on-demand video, designed to work across Smart TV, mobile, tablet, and web, with a full CMS for station operators.",
     process: "The platform needed one design language across radically different screen contexts. A TV UI navigated by remote, touch-based mobile and tablet apps, and a desktop admin panel each required its own interaction patterns while staying visually consistent.",
     role: "UI/UX design across all platforms and admin CMS, and HTML/CSS implementation.",
     contribution: {
-      items: ["Designed consumer UI for Smart TV, iOS/Android, tablet, and web with a shared visual system", "Built remote-friendly TV interface with keyboard-based search and channel navigation", "Designed the admin CMS for managing users, tags, categories, input sources, and assets", "Supported white-label customization with same platform adapted for different station branding", "Implemented responsive HTML/CSS layouts"],
+      items: ["Designed consumer UI/UX for Smart TV, iOS/Android, tablet, and web with a shared visual system", "Built remote-friendly TV interface with keyboard-based search and channel navigation", "Designed the admin CMS for managing users, tags, categories, input sources, and assets", "Supported white-label customization with same platform adapted for different station branding", "Implemented responsive HTML/CSS layouts"],
     },
     galleryImages: [
       {src: "/images/projects/jtv/project-mockup1", alt: "JTV Tablet and Mobile App Screens", className: "project__image--smaller"},
@@ -185,7 +185,7 @@ export const ProjectsList = [
   {
     id: "dohn",
     imageUrl: "/images/projects/dohn/project-hero",
-    tags: ["B2B", "Web", "UX/UI", "Responsive"],
+    tags: ["Design", "Code", "Web", "B2B"],
     title: "Dohn Construction",
     description: "Dohn Construction needed a refreshed website to modernize its online presence and better showcase services and past projects.",
     process: "Working from the existing site structure and an updated brand direction, I redesigned the full site — restructuring content, refreshing visuals, and ensuring consistency across all pages.",
@@ -215,7 +215,7 @@ export const ProjectsList = [
   {
     id: "locast",
     imageUrl: "/images/projects/locast/project-hero",
-    tags: ["B2C", "Cross-platform", "Smart TV", "Web", "UX/UI", "Branding", "Marketing"],
+    tags: ["Design", "Code", "Smart TV", "Web", "App", "B2C", "Branding", "Marketing"],
     title: "Locast",
     description: "Locast was a non-profit streaming service for watching local TV channels across 30+ US markets, serving 3M+ users.",
     process: "The work covered the full product experience across all platforms and touchpoints, from the core TV guide and player to device activation, geofencing, donation flows, and all marketing materials.",
@@ -248,7 +248,7 @@ export const ProjectsList = [
   {
     id: "locast-ops-dashboard",
     imageUrl: "/images/projects/locast-ops-dashboard/project-hero",
-    tags: ["Internal Tool", "Dashboard", "Web", "UX/UI", "Front-End"],
+    tags: ["Design", "Code", "Web", "Dashboard", "Branding"],
     title: "Locast Ops Dashboard",
     description: "An internal real-time monitoring tool for the Locast ops team, providing live visibility into antenna status, broadcast health, and channel activity across all US markets.",
     process: "Designed from scratch as a standalone internal tool, built to give the ops team instant access to live status data across all monitored locations.",
@@ -272,7 +272,7 @@ export const ProjectsList = [
   {
     id: "t2w",
     imageUrl: "/images/projects/t2w/project-hero",
-    tags: ["B2B", "Mobile", "UX/UI", "Branding", "Responsive", "Front-End"],
+    tags: ["Design", "Code", "Web", "App", "B2B", "Branding"],
     title: "Trades2Work",
     description: "Trades2Work needed a solution that simplifies time tracking and field workflows for construction trades, providing a unified interface for workers and managers.",
     process: "The project covered both the mobile app and a presentation website — designed in parallel to ensure the product and its public face felt like one cohesive system.",
