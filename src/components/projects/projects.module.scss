@@ -18,13 +18,13 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8rem 6rem;
+    gap: var(--space-10) var(--space-8);
     justify-content: space-between;
   }
 
   &__list_item {
     width: 100%;
-    max-width: calc(50% - 3rem);
+    max-width: calc(50% - var(--space-4));
     position: relative;
 
     &:nth-child(1),
@@ -42,27 +42,26 @@
 
     h2 {
       font-family: var(--font-main);
-      font-size: 2.6rem;
+      font-size: var(--fs-md);
       font-weight: 400;
       letter-spacing: -0.02em;
-      margin: 2.4rem 0 1.2rem;
+      margin: var(--space-3) 0 var(--space-2);
       color: var(--foreground);
       display: flex;
       align-items: center;
-      gap: 0.8rem;
-       transition: color 0.3s ease;
+      gap: var(--space-1);
 
       .arrow_wrapper {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        height: 3.2rem;
+        height: var(--space-4);
       }
 
       .arrow {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: var(--space-4);
+        height: var(--space-4);
         color: var(--grey);
         opacity: 0;
         transform: translateY(100%);
@@ -88,7 +87,7 @@
     aspect-ratio: 3 / 2;
     background-color: #d6d6d5;
     overflow: hidden;
-    border-radius: 4rem;
+    border-radius: var(--radius-img);
 
     img {
       width: 100%;
@@ -102,7 +101,7 @@
   &__tags_wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: var(--space-1);
   }
 
   &__list_item_tag {
@@ -111,15 +110,15 @@
     align-items: center;
     justify-content: center;
     font-family: var(--font-main);
-    font-size: 1.1rem;
+    font-size: var(--fs-xxs);
     font-weight: 400;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     padding: 0.35em 1em;
-    border-radius: 10rem;
+    border-radius: var(--radius-pill);
     color: var(--foreground);
     background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--grey-50);
     cursor: pointer;
     overflow: visible;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -144,7 +143,7 @@
       z-index: -1;
       transition: opacity 0.4s ease;
       animation: globalRainbow 15s linear infinite;
-      border-radius: 10rem;
+      border-radius: var(--radius-pill);
     }
 
     &:hover {
@@ -174,7 +173,7 @@
   @media (max-width: 800px) {
     &__list {
       flex-direction: column;
-      gap: 5rem;
+      gap: var(--space-6);
     }
 
     &__list_item {
@@ -184,15 +183,15 @@
 
   @media (max-width: 500px) {
     &__card_link h2 {
-      font-size: 2rem;
+      font-size: var(--fs-base);
 
       .arrow_wrapper {
-        height: 2.4rem;
+        height: var(--space-3);
       }
 
       .arrow {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: var(--space-3);
+        height: var(--space-3);
       }
     }
   }

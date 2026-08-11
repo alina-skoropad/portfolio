@@ -1,5 +1,5 @@
 .slider {
-  margin-bottom: 12rem;
+  margin-bottom: var(--space-16);
 
   picture,
   img,
@@ -27,8 +27,8 @@
   &__arrow {
     position: absolute;
     top: 50%;
-    width: 16rem;
-    height: 16rem;
+    width: var(--space-16);
+    height: var(--space-16);
     border: none;
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -42,22 +42,22 @@
     transition: opacity 0.3s, background-color 0.3s;
 
     &--next {
-      right: -8rem;
+      right: calc(-1 * var(--space-10));
       border-radius: 50% 0 0 50%;
 
       &::before {
         transform: rotate(-45deg);
-        right: 3rem;
+        right: var(--space-4);
       }
     }
 
     &--prev {
-      left: -8rem;
+      left: calc(-1 * var(--space-10));
       border-radius: 0 50% 50% 0;
 
       &::before {
         transform: rotate(45deg) scaleX(-1);
-        left: 3rem;
+        left: var(--space-4);
       }
     }
 
@@ -65,7 +65,7 @@
       content: '';
       border: solid white;
       border-width: 0 3px 3px 0;
-      padding: 8px;
+      padding: var(--space-1);
       position: relative;
       display: inline-block;
     }
@@ -76,7 +76,6 @@
   }
 
   @media (hover: hover) {
-
     &:hover,
     &:focus,
     &:active {
@@ -89,7 +88,7 @@
 
 @media (max-width: 800px) {
   .slider {
-    margin-bottom: 9rem;
+    margin-bottom: var(--space-12);
 
     &__arrow {
       display: none;
