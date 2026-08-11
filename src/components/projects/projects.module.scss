@@ -41,11 +41,6 @@
             font-weight: 600;
             line-height: 1.3;
             transition: background-color 0.3s ease, color 0.3s ease;
-
-            &:hover {
-                background-color: var(--foreground);
-                color: var(--background);
-            }
         }
 
         &_img {
