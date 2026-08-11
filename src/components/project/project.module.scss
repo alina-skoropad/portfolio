@@ -92,7 +92,7 @@
 .project__prototype {
   flex-basis: 20rem;
   color: var(--grey);
-  font-size: clamp(var(--fs-md), 1.4vw + 1.6rem, 2.8rem);
+  font-size: clamp(var(--fs-sm), 1.4vw + 1.6rem, 2.8rem);
 }
 
 .project__link {
@@ -101,7 +101,7 @@
   padding: var(--space-2) var(--space-3);
   position: relative;
   overflow: hidden;
-  font-size: clamp(var(--fs-md), 1.4vw + 1.6rem, 2.8rem);
+  font-size: clamp(var(--fs-sm), 1.4vw + 1.6rem, 2.8rem);
   cursor: pointer;
   align-self: flex-start;
   display: block;
@@ -126,6 +126,7 @@
   }
 
   @media (hover: hover) {
+
     &:hover,
     &:focus,
     &:active {
@@ -146,6 +147,7 @@
     color: var(--orange);
 
     @media (hover: hover) {
+
       &:hover,
       &:focus,
       &:active {
@@ -164,6 +166,7 @@
     color: var(--green);
 
     @media (hover: hover) {
+
       &:hover,
       &:focus,
       &:active {
@@ -182,6 +185,7 @@
     color: var(--dark-green);
 
     @media (hover: hover) {
+
       &:hover,
       &:focus,
       &:active {
@@ -200,6 +204,7 @@
     color: var(--dark-blue);
 
     @media (hover: hover) {
+
       &:hover,
       &:focus,
       &:active {
@@ -218,6 +223,7 @@
     color: var(--dark-blue);
 
     @media (hover: hover) {
+
       &:hover,
       &:focus,
       &:active {
@@ -236,6 +242,7 @@
     color: var(--light-green);
 
     @media (hover: hover) {
+
       &:hover,
       &:focus,
       &:active {
@@ -323,6 +330,7 @@
 }
 
 @media (max-width: 800px) {
+
   .project__link,
   .project__prototype {
     margin-top: var(--space-3);
@@ -364,12 +372,19 @@
   .project__details {
     margin: var(--space-5) 0 var(--space-2);
   }
+
+  .project__link {
+    margin: var(--space-1) 0 var(--space-3);
+    font-size: var(--fs-base);
+    padding: var(--space-1) var(--space-2);
+
+  }
 }
 
 @media (max-width: 500px) {
   .project__image {
     figcaption {
-      font-size: var(--fs-xs);
+      font-size: var(--fs-xxs);
     }
   }
 
@@ -387,6 +402,7 @@
 }
 
 @media (max-width: 480px) {
+
   .project__description,
   .project__image:has(.project__image--smaller),
   .project__navigation,
