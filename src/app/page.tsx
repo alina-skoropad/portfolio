@@ -59,7 +59,6 @@ export default function Home() {
     setActiveFilter((prev) => {
       const nextFilter = prev === tag ? null : tag;
 
-      // Авто-скролл до списку проектів на мобільних при активації фільтра
       if (nextFilter && window.innerWidth <= 768 && projectsSectionRef.current) {
         setTimeout(() => {
           projectsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
