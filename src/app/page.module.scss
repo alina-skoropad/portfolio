@@ -4,7 +4,7 @@
   align-items: center;
   justify-items: center;
   min-height: 100vh;
-  padding: var(--space-8) var(--space-4) var(--space-10);
+  padding: var(--space-8) var(--space-3) var(--space-10);
 }
 
 .main {
@@ -106,7 +106,7 @@
   }
 
   &__reset {
-    margin-top: var(--space-4);
+    margin-top: var(--space-3);
     font-size: var(--fs-sm);
     color: var(--grey);
     display: flex;
@@ -140,7 +140,7 @@
 
 @media (max-width: 768px) {
   .page {
-    padding: var(--space-5) var(--space-4) var(--space-6);
+    padding: var(--space-5) var(--space-3) var(--space-6);
   }
 
   .main {
