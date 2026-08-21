@@ -29,11 +29,11 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
 
   return (
     <div className={styles.projects}>
-      <div className={styles.projects__list}>
+      <div className={styles['projects__list']}>
         <AnimatePresence mode="wait">
           {filteredProjects.map((project: Project, index: number) => (
             <motion.div
-              className={styles.projects__list_item}
+              className={styles['projects__list_item']}
               key={project.id}
               initial={{ opacity: 0, scale: 0.96, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -42,9 +42,9 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
             >
               <Link
                 href={`/projects/${project.id}`}
-                className={styles.projects__card_link}
+                className={styles['projects__card_link']}
               >
-                <div className={styles.projects__list_img}>
+                <div className={styles['projects__list_img']}>
                   {project.imageUrl && (
                     <Image
                       src={project.imageUrl}
@@ -61,7 +61,7 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
                 </h2>
               </Link>
 
-              <div className={styles.projects__tags_wrapper}>
+              <div className={styles['projects__tags_wrapper']}>
                 {project.tags.map((tag, tagIndex) => {
                   const isActive =
                     activeFilter?.toLowerCase() === tag.toLowerCase();
@@ -69,7 +69,7 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
                     <button
                       key={tagIndex}
                       type="button"
-                      className={`${styles.projects__list_item_tag} ${
+                      className={`${styles['projects__list_item_tag']} ${
                         isActive ? styles.active : ""
                       }`}
                       onClick={() => onSelectFilter?.(tag)}

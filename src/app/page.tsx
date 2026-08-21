@@ -80,7 +80,7 @@ export default function Home() {
     <div className={styles.page}>
       <section className={styles.main}>
         <div className={styles.hero}>
-          <motion.h1 className={styles.hero__title} variants={staggerContainer} initial="hidden" animate="visible">
+          <motion.h1 className={styles['hero__title']} variants={staggerContainer} initial="hidden" animate="visible">
             {heroSegments.map((segment, index) => {
               const segmentKey = `hero-${index}-${segment.type}`;
 
@@ -98,7 +98,7 @@ export default function Home() {
                   type="button"
                   variants={segmentAnimation}
                   onClick={() => toggleFilter(segment.filter)}
-                  className={`${styles.hero__tag} ${activeFilter === segment.filter ? styles.active : ""}`}
+                  className={`${styles['hero__tag']} ${activeFilter === segment.filter ? styles.active : ""}`}
                 >
                   {segment.label}
                 </motion.button>
@@ -109,14 +109,14 @@ export default function Home() {
           <AnimatePresence>
             {activeFilter && (
               <motion.div
-                className={styles.hero__reset}
+                className={styles['hero__reset']}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
               >
                 <span>
                   Showing: <strong>{activeFilter}</strong>
-                  {filteredCount !== null && <span className={styles.hero__count}> · {filteredCount}</span>}
+                  {filteredCount !== null && <span className={styles['hero__count']}> · {filteredCount}</span>}
                 </span>
                 <button type="button" onClick={() => setActiveFilter(null)}>
                   ✕ Clear filter
@@ -126,7 +126,7 @@ export default function Home() {
           </AnimatePresence>
         </div>
 
-        <div className={styles.main__projects} ref={projectsSectionRef}>
+        <div className={styles['main__projects']} ref={projectsSectionRef}>
           <Projects activeFilter={activeFilter} onSelectFilter={toggleFilter} />
         </div>
       </section>
