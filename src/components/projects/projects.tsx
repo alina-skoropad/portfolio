@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "@/components/common/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import styles from "./projects.module.scss";
 import { ProjectsList } from "@/data/ProjectsList";
 
@@ -19,6 +20,18 @@ interface ProjectsProps {
 }
 
 const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
+  // Відстежуємо зміни фільтра після первинного завантаження,
+  // щоб анімація перемикання не чіпала момент рефрешу (F5)
+  const [filterVersion, setFilterVersion] = useState(0);
+  const prevFilterRef = useRef(activeFilter);
+
+  useEffect(() => {
+    if (prevFilterRef.current !== activeFilter) {
+      prevFilterRef.current = activeFilter;
+      setFilterVersion((v) => v + 1);
+    }
+  }, [activeFilter]);
+
   const filteredProjects = activeFilter
     ? ProjectsList.filter((project: Project) =>
         project.tags.some(
@@ -30,15 +43,19 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
   return (
     <div className={styles.projects}>
       <div className={styles["projects__list"]}>
-        <AnimatePresence>
-          {filteredProjects.map((project: Project, index: number) => (
+        {filteredProjects.map((project: Project, index: number) => (
+          <motion.div
+            layout
+            className={styles["projects__list_item"]}
+            key={project.id}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {/* Внутрішній блок анімується щоразу при зміні фільтра, 
+                але на старті (F5) має version = 0, тому не створює бліків */}
             <motion.div
-              layout
-              className={styles["projects__list_item"]}
-              key={project.id}
-              initial={{ opacity: 0, scale: 0.96, y: 15 }}
+              key={`${project.id}-${filterVersion}`}
+              initial={filterVersion > 0 ? { opacity: 0, scale: 0.97, y: 8 } : false}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 15 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link
@@ -80,8 +97,8 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
                 })}
               </div>
             </motion.div>
-          ))}
-        </AnimatePresence>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

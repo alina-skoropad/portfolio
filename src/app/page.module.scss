@@ -132,6 +132,32 @@
   &__count {
     color: var(--grey);
   }
+
+  &__word,
+  &__tag {
+    display: inline-block;
+    opacity: 0;
+    animation: wordFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @for $i from 1 through 25 {
+    .hero__word:nth-child(#{$i}),
+    .hero__tag:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.025 + 0.05}s;
+    }
+  }
+
+  @keyframes wordFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 .main__projects {
