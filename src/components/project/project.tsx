@@ -143,7 +143,7 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
                   width={2560} 
                   height={900} 
                   className={img.className ? styles[img.className] : undefined} 
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
                 />
                 {img.figcaption && <figcaption>{img.figcaption}</figcaption>}
               </motion.figure>

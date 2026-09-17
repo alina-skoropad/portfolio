@@ -47,7 +47,7 @@
 
       &::before {
         transform: rotate(-45deg);
-        right: var(--space-3);
+        right: 3.7rem;
       }
     }
 
@@ -57,7 +57,7 @@
 
       &::before {
         transform: rotate(45deg) scaleX(-1);
-        left: var(--space-3);
+        left: 3.7rem;
       }
     }
 

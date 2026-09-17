@@ -23,7 +23,7 @@ const Image: FC<ImageProps> = ({
   loading = "lazy",
   decoding = "async",
   priority = false,
-  sizes = "(max-width: 768px) 100vw, (max-width: 1440px) 100vw, 2560px",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1440px) 100vw, 100vw",
   srcSetWidths = [320, 480, 768, 1024, 1280, 1920, 2560],
   ...rest
 }) => {
