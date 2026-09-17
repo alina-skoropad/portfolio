@@ -29,12 +29,9 @@
     max-width: calc(50% - var(--space-2));
     position: relative;
     will-change: transform, opacity;
-
-    // Гарантуємо, що за замовчуванням усе видиме (жодних бліків на старті)
     opacity: 1;
     transform: translateY(0);
 
-    // Чиста CSS-анімація тільки для перших 3 карток при рефреші
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {

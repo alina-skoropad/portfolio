@@ -20,8 +20,6 @@ interface ProjectsProps {
 }
 
 const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
-  // Відстежуємо зміни фільтра після первинного завантаження,
-  // щоб анімація перемикання не чіпала момент рефрешу (F5)
   const [filterVersion, setFilterVersion] = useState(0);
   const prevFilterRef = useRef(activeFilter);
 
@@ -50,8 +48,6 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
             key={project.id}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* Внутрішній блок анімується щоразу при зміні фільтра, 
-                але на старті (F5) має version = 0, тому не створює бліків */}
             <motion.div
               key={`${project.id}-${filterVersion}`}
               initial={filterVersion > 0 ? { opacity: 0, scale: 0.97, y: 8 } : false}
