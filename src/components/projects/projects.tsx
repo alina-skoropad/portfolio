@@ -29,39 +29,38 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
 
   return (
     <div className={styles.projects}>
-      <div className={styles['projects__list']}>
-        <AnimatePresence mode="wait">
+      <div className={styles["projects__list"]}>
+        <AnimatePresence>
           {filteredProjects.map((project: Project, index: number) => (
             <motion.div
-              className={styles['projects__list_item']}
+              layout
+              className={styles["projects__list_item"]}
               key={project.id}
               initial={{ opacity: 0, scale: 0.96, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 15 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link
                 href={`/projects/${project.id}`}
-                className={styles['projects__card_link']}
+                className={styles["projects__card_link"]}
               >
-                <div className={styles['projects__list_img']}>
+                <div className={styles["projects__list_img"]}>
                   {project.imageUrl && (
                     <Image
                       src={project.imageUrl}
                       alt={`Main image for ${project.title}`}
                       width={2560}
                       height={800}
-                      sizes="(max-width: 768px) 100vw, 100vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                       priority={index < 2}
                     />
                   )}
                 </div>
-                <h2>
-                  {project.title}
-                </h2>
+                <h2>{project.title}</h2>
               </Link>
 
-              <div className={styles['projects__tags_wrapper']}>
+              <div className={styles["projects__tags_wrapper"]}>
                 {project.tags.map((tag, tagIndex) => {
                   const isActive =
                     activeFilter?.toLowerCase() === tag.toLowerCase();
@@ -69,7 +68,8 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
                     <button
                       key={tagIndex}
                       type="button"
-                      className={`${styles['projects__list_item_tag']} ${
+                      aria-pressed={isActive}
+                      className={`${styles["projects__list_item_tag"]} ${
                         isActive ? styles.active : ""
                       }`}
                       onClick={() => onSelectFilter?.(tag)}
