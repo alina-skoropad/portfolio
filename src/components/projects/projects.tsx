@@ -41,58 +41,55 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
   return (
     <div className={styles.projects}>
       <div className={styles["projects__list"]}>
-        {filteredProjects.map((project: Project, index: number) => (
+       {filteredProjects.map((project: Project, index: number) => (
           <motion.div
             layout
             className={styles["projects__list_item"]}
-            key={project.id}
+            // Змінюємо ключ залежно від версії фільтра після першого завантаження.
+            // Це змушує Framer Motion плавно вібрувати/перезапускати анімацію навіть для того самого проєкту.
+            key={`${project.id}-${filterVersion}`}
+            initial={filterVersion > 0 ? { opacity: 0, scale: 0.97, y: 8 } : false}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.div
-              key={`${project.id}-${filterVersion}`}
-              initial={filterVersion > 0 ? { opacity: 0, scale: 0.97, y: 8 } : false}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            <Link
+              href={`/projects/${project.id}`}
+              className={styles["projects__card_link"]}
             >
-              <Link
-                href={`/projects/${project.id}`}
-                className={styles["projects__card_link"]}
-              >
-                <div className={styles["projects__list_img"]}>
-                  {project.imageUrl && (
-                    <Image
-                      src={project.imageUrl}
-                      alt={`Main image for ${project.title}`}
-                      width={2560}
-                      height={800}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
-                      priority={index < 2}
-                    />
-                  )}
-                </div>
-                <h2>{project.title}</h2>
-              </Link>
-
-              <div className={styles["projects__tags_wrapper"]}>
-                {project.tags.map((tag, tagIndex) => {
-                  const isActive =
-                    activeFilter?.toLowerCase() === tag.toLowerCase();
-                  return (
-                    <button
-                      key={tagIndex}
-                      type="button"
-                      aria-pressed={isActive}
-                      className={`${styles["projects__list_item_tag"]} ${
-                        isActive ? styles.active : ""
-                      }`}
-                      onClick={() => onSelectFilter?.(tag)}
-                    >
-                      {tag}
-                    </button>
-                  );
-                })}
+              <div className={styles["projects__list_img"]}>
+                {project.imageUrl && (
+                  <Image
+                    src={project.imageUrl}
+                    alt={`Main image for ${project.title}`}
+                    width={2560}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+                    priority={index < 2}
+                  />
+                )}
               </div>
-            </motion.div>
+              <h2>{project.title}</h2>
+            </Link>
+
+            <div className={styles["projects__tags_wrapper"]}>
+              {project.tags.map((tag, tagIndex) => {
+                const isActive =
+                  activeFilter?.toLowerCase() === tag.toLowerCase();
+                return (
+                  <button
+                    key={tagIndex}
+                    type="button"
+                    aria-pressed={isActive}
+                    className={`${styles["projects__list_item_tag"]} ${
+                      isActive ? styles.active : ""
+                    }`}
+                    onClick={() => onSelectFilter?.(tag)}
+                  >
+                    {tag}
+                  </button>
+                );
+              })}
+            </div>
           </motion.div>
         ))}
       </div>
