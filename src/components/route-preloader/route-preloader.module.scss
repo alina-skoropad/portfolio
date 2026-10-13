@@ -1,0 +1,25 @@
+.preloader {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10000;
+  height: 2px;
+  pointer-events: none;
+  transform-origin: left;
+  background: linear-gradient(120deg, #ff007a, #7928ca, #0070f3, #00dfd8, #ff007a);
+  background-size: 300% 300%;
+  animation: preloaderRainbow 15s linear infinite;
+}
+
+@keyframes preloaderRainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

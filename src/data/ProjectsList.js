@@ -33,7 +33,7 @@ export const ProjectsList = [
   {
     id: "gvn",
     imageUrl: "/images/projects/gvn/project-hero",
-    tags: ["Design", "Code", "Web", "B2С", "E-commerce", "Marketing"],
+    tags: ["Design", "Code", "Web", "B2C", "E-commerce", "Marketing"],
     title: "Green Valley Naturals",
     description: "GVN needed a clear digital presence, starting with a blog redesign and expanding to a full e-commerce platform with integrated checkout.",
     process: "The project evolved in stages. First the blog, then the main site to match the new visual direction, then landing pages aligned with a product packaging refresh, and finally migrating checkout from a third-party service to the site itself.",

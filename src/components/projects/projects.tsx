@@ -63,7 +63,9 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
                     alt={`Main image for ${project.title}`}
                     width={2560}
                     height={800}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+                    sizes={index === 0 || index === 3 || index === 4 || index === 7
+                      ? "100vw"
+                      : "(max-width: 800px) 100vw, 50vw"}
                     priority={index < 2}
                   />
                 )}

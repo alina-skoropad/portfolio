@@ -3,6 +3,7 @@ import { Mona_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import RoutePreloader from "@/components/route-preloader/route-preloader";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
+        <RoutePreloader />
       </body>
     </html>
   );
