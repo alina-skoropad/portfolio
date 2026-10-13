@@ -13,7 +13,7 @@
 }
 
 .project__hero {
-  max-height: calc(100vh - var(--space-10));
+  max-height: calc(100vh - var(--space-4xl));
   flex: 1;
   display: flex;
   justify-content: center;
@@ -46,13 +46,13 @@
 .project__image {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto var(--space-10);
+  margin: 0 auto var(--space-4xl);
   display: flex;
   flex-direction: column;
 
   figcaption {
-    margin: var(--space-4) auto 0;
-    padding: 0 var(--space-2);
+    margin: var(--space-lg) auto 0;
+    padding: 0 var(--space-sm);
     text-align: center;
     color: var(--grey);
     font-size: var(--fs-xs);
@@ -63,12 +63,12 @@
 }
 
 .project__description {
-  margin: var(--space-8) auto 0;
-  padding: 0 var(--space-4);
+  margin: var(--space-3xl) auto 0;
+  padding: 0 var(--space-lg);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-4);
+  gap: var(--space-lg);
   max-width: 128rem;
 
   h2 {
@@ -78,11 +78,11 @@
 
 .project__contribution {
   list-style-type: disc;
-  margin-left: var(--space-2);
+  margin-left: var(--space-sm);
 }
 
 .project__contribution-item {
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-xs);
 
   &::marker {
     font-size: 0.8em;
@@ -98,7 +98,7 @@
 .project__link {
   border: 1px solid var(--foreground);
   border-radius: var(--radius-pill);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-sm) var(--space-md);
   position: relative;
   overflow: hidden;
   font-size: clamp(var(--fs-sm), 1.4vw + 1.6rem, 2.8rem);
@@ -121,7 +121,7 @@
     left: 0;
     top: 0;
     z-index: 0;
-    transform: translateY(var(--space-10));
+    transform: translateY(var(--space-4xl));
     transition: all 0.3s ease-in-out;
   }
 
@@ -251,11 +251,11 @@
 
 .project__details {
   width: 100%;
-  margin: var(--space-8) auto var(--space-10);
-  padding: 0 var(--space-4);
+  margin: var(--space-3xl) auto var(--space-4xl);
+  padding: 0 var(--space-lg);
   display: flex;
   justify-content: space-between;
-  gap: var(--space-12);
+  gap: var(--space-5xl);
   max-width: 128rem;
 }
 
@@ -264,7 +264,7 @@
   flex-shrink: 0;
 
   h3 {
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-lg);
   }
 }
 
@@ -272,13 +272,13 @@
   flex: 1;
 
   p {
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-lg);
   }
 }
 
 .project__navigation {
-  margin-bottom: var(--space-10);
-  padding: 0 var(--space-4);
+  margin-bottom: var(--space-4xl);
+  padding: 0 var(--space-lg);
   text-align: center;
 
   h2 {
@@ -314,35 +314,35 @@
 
 @media (max-width: 1400px) {
   .project__description {
-    margin: var(--space-10) auto 0;
+    margin: var(--space-4xl) auto 0;
   }
 
   .project__details {
-    margin-bottom: var(--space-10);
+    margin-bottom: var(--space-4xl);
   }
 }
 
 @media (max-width: 800px) {
   .project__link,
   .project__prototype {
-    margin-top: var(--space-3);
+    margin-top: var(--space-md);
   }
 
   .project__image {
-    margin: 0 auto var(--space-8);
+    margin: 0 auto var(--space-3xl);
 
     figcaption {
-      margin: var(--space-2) auto;
+      margin: var(--space-sm) auto;
     }
   }
 
   .project__navigation {
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-3xl);
   }
 
   .project__details {
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-lg);
   }
 
   .project__details-item,
@@ -353,24 +353,24 @@
 
 @media (max-width: 600px) {
   .project__description {
-    margin: var(--space-8) 0 0;
-    gap: var(--space-4);
+    margin: var(--space-3xl) 0 0;
+    gap: var(--space-lg);
   }
 
   .project__details {
-    margin: var(--space-5) 0 var(--space-2);
+    margin: var(--space-xl) 0 var(--space-sm);
   }
 
   .project__link {
-    margin: var(--space-1) 0 var(--space-3);
+    margin: var(--space-xs) 0 var(--space-md);
     font-size: var(--fs-base);
-    padding: var(--space-1) var(--space-2);
+    padding: var(--space-xs) var(--space-sm);
   }
 }
 
 @media (max-width: 500px) {
   .project__image {
-    margin: 0 auto var(--space-4);
+    margin: 0 auto var(--space-lg);
 
     figcaption {
       font-size: var(--fs-xxs);
@@ -378,7 +378,7 @@
   }
 
   .project__navigation {
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-lg);
   }
 }
 
@@ -386,10 +386,10 @@
   .project__description,
   .project__navigation,
   .project__details {
-    padding: 0 var(--space-2);
+    padding: 0 var(--space-sm);
   }
 
   .project__description {
-    margin: var(--space-5) 0 0;
+    margin: var(--space-xl) 0 0;
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import {useMemo, useState, useRef} from "react";
+import {Fragment, useMemo, useState, useRef} from "react";
 import {motion, AnimatePresence, Variants} from "framer-motion";
 import styles from "./page.module.scss";
 import Projects from "@/components/projects/projects";
@@ -79,14 +79,17 @@ export default function Home() {
           <h1 className={styles["hero__title"]}>
             {heroSegments.map((segment, index) => {
               const segmentKey = `hero-${index}-${segment.type}`;
-              return segment.type === "text" ? (
-                <span key={segmentKey} className={styles.hero__word}>
-                  {segment.text}
-                </span>
-              ) : (
-                <button key={segmentKey} type="button" onClick={() => toggleFilter(segment.filter)} className={`${styles["hero__tag"]} ${activeFilter === segment.filter ? styles.active : ""}`}>
-                  {segment.label}
-                </button>
+              return (
+                <Fragment key={segmentKey}>
+                  {segment.type === "text" ? (
+                    <span className={styles.hero__word}>{segment.text}</span>
+                  ) : (
+                    <button type="button" onClick={() => toggleFilter(segment.filter)} className={`${styles["hero__tag"]} ${activeFilter === segment.filter ? styles.active : ""}`}>
+                      {segment.label}
+                    </button>
+                  )}
+                  {index < heroSegments.length - 1 ? " " : null}
+                </Fragment>
               );
             })}
           </h1>
