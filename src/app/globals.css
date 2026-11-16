@@ -2,10 +2,12 @@
 
 :root {
   --background: #f7f4f0;
-  --foreground: #000000;
-  --grey: #767676;
-  --grey-50: rgba(0, 0, 0, 0.12);
+  --foreground: #121212;
+  --grey: #595959;
+  --grey-50: rgba(18, 18, 18, 0.14);
 
+  --space-3xs: 0.2rem;
+  --space-2xs: 0.4rem;
   --space-xs: 0.8rem;
   --space-sm: 1.6rem;
   --space-md: 2.4rem;
@@ -17,16 +19,22 @@
   --space-5xl: 9.6rem;
   --space-6xl: 12.8rem;
 
-  --fs-xxs: 1rem;
+  --fs-xxs: 1.1rem;
   --fs-xs: 1.2rem;
-  --fs-sm: 1.6rem;
-  --fs-base: 1.8rem;
+  --fs-sm: 1.5rem;
+  --fs-base: 1.7rem;
   --fs-md: 2.4rem;
-  --fs-lg: 3.2rem;
-  --fs-xxl: 7rem;
+  --fs-lg: 3.4rem;
+  --fs-xl: 4.2rem;
+  --fs-xxl: 6.8rem;
 
-  --radius-img: 0.8rem;   
-  --radius-pill: 10rem;   
+  --fs-display: clamp(3.2rem, 4.8vw, 6.4rem);
+  --fs-heading: clamp(2.8rem, 2.8vw, var(--fs-xl));
+  --fs-action: clamp(2.2rem, 2vw, var(--fs-lg));
+  --touch-target: 4.4rem;
+
+  --radius-img: 0.8rem;
+  --radius-pill: 10rem;
 }
 
 html {
@@ -37,10 +45,11 @@ html {
 }
 
 body {
+  font-family: var(--font-main), -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--foreground);
   background: var(--background);
   font-size: var(--fs-base);
-  line-height: 1.5;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -65,30 +74,35 @@ a {
 }
 
 h1 {
-  font-size: clamp(3.6rem, 3.4vw + 2rem, var(--fs-xxl));
-  font-weight: normal;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: var(--fs-display);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: clamp(2rem, 1.1vw + 1.6rem, var(--fs-lg));
-  font-weight: 600;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: var(--fs-heading);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 h3 {
+  font-family: var(--font-mono), monospace;
   font-size: var(--fs-xs);
   color: var(--grey);
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
 .serif_accent {
   font-family: var(--font-serif), serif;
   font-style: italic;
-  font-weight: 400;
-  font-size: 1.08em;
+  font-weight: 500;
+  font-size: 1.06em;
 }
 
 .visually-hidden {
@@ -123,7 +137,7 @@ h3 {
 }
 
 .slick-dots {
-  bottom: -5rem !important;
+  bottom: calc(-1 * var(--space-2xl)) !important;
 }
 
 @media (max-width: 800px) {
@@ -135,5 +149,23 @@ h3 {
 @media (max-width: 600px) {
   body {
     font-size: var(--fs-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-display: clamp(2.8rem, 6.8vw, 4.2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-action: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --fs-heading: 2.6rem;
   }
 }
