@@ -56,7 +56,10 @@ const Projects = ({ activeFilter, onSelectFilter }: ProjectsProps) => {
               href={`/projects/${project.id}`}
               className={styles["projects__card_link"]}
             >
-              <div className={styles["projects__list_img"]}>
+              <div
+  className={styles["projects__list_img"]}
+  style={{ viewTransitionName: `project-img-${project.id}` }}
+>
                 {project.imageUrl && (
                   <Image
                     src={project.imageUrl}

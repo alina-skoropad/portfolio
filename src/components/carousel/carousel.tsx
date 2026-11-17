@@ -1,5 +1,7 @@
-import {useRef} from "react";
-import Slider, {Settings} from "react-slick";
+"use client";
+
+import { useRef, useEffect } from "react";
+import Slider, { Settings } from "react-slick";
 import Image from "@/components/common/image";
 import styles from "./carousel.module.scss";
 
@@ -14,42 +16,45 @@ type ArrowProps = {
   onClick?: () => void;
 };
 
-const NextArrow = ({onClick}: ArrowProps) => (
+const NextArrow = ({ onClick }: ArrowProps) => (
   <button
-    className={`${styles['slider__arrow']} ${styles['slider__arrow--next']}`}
+    type="button"
+    className={`${styles["slider__arrow"]} ${styles["slider__arrow--next"]}`}
     onClick={onClick}
     aria-label="Next Slide"
   />
 );
 
-const PrevArrow = ({onClick}: ArrowProps) => (
+const PrevArrow = ({ onClick }: ArrowProps) => (
   <button
-    className={`${styles['slider__arrow']} ${styles['slider__arrow--prev']}`}
+    type="button"
+    className={`${styles["slider__arrow"]} ${styles["slider__arrow--prev"]}`}
     onClick={onClick}
     aria-label="Previous Slide"
   />
 );
 
-const MyCarousel = ({images}: {images: ImageObject[]}) => {
-  const sliderRef = useRef<Slider>(null);
-  const loadedImagesRef = useRef(0);
+const MyCarousel = ({ images }: { images: ImageObject[] }) => {
+  const sliderRef = useRef<Slider | null>(null);
 
-  const handleImageLoad = () => {
-    loadedImagesRef.current += 1;
-    if (loadedImagesRef.current === images.length && sliderRef.current) {
-      sliderRef.current.slickGoTo(0);
-    }
-  };
+  useEffect(() => {
+    return () => {
+      sliderRef.current = null;
+    };
+  }, []);
+
+  if (!images?.length) return null;
 
   const settings: Settings = {
     centerMode: true,
     centerPadding: "25%",
     slidesToShow: 1,
-    infinite: true,
-    adaptiveHeight: true,
+    infinite: images.length > 1,
+    adaptiveHeight: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     dots: true,
+    lazyLoad: "ondemand",
     responsive: [
       {
         breakpoint: 1024,
@@ -70,14 +75,13 @@ const MyCarousel = ({images}: {images: ImageObject[]}) => {
     <div className={styles.slider}>
       <Slider ref={sliderRef} {...settings}>
         {images.map((img, index) => (
-          <div key={index} className={styles['slider__slide']}>
+          <div key={`${img.src}-${index}`} className={styles["slider__slide"]}>
             <Image
               src={img.src}
               alt={img.alt}
               width={1920}
               height={900}
-              className={styles['slider__image']}
-              onLoad={handleImageLoad}
+              className={styles["slider__image"]}
             />
           </div>
         ))}

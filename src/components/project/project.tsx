@@ -98,7 +98,11 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
   return (
     <div className={styles.project__container}>
       {project.imageUrl && (
-        <div className={styles.project__hero} ref={heroRef}>
+        <div
+  className={styles.project__hero}
+  ref={heroRef}
+  style={{ viewTransitionName: `project-img-${project.id}` }}
+>
           <motion.div
             className={styles.project__hero_inner}
             style={
