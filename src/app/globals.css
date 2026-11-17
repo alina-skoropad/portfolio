@@ -3,8 +3,10 @@
 :root {
   --background: #f7f4f0;
   --foreground: #121212;
-  --grey: #595959;
-  --grey-50: rgba(18, 18, 18, 0.14);
+  --grey: #666666;
+  --grey-50: rgba(18, 18, 18, 0.1);
+  --accent: #b85a3a;
+  --surface: #e8e3dc;
 
   --space-3xs: 0.2rem;
   --space-2xs: 0.4rem;
@@ -12,29 +14,31 @@
   --space-sm: 1.6rem;
   --space-md: 2.4rem;
   --space-lg: 3.2rem;
-  --space-xl: 4rem;
-  --space-2xl: 4.8rem;
-  --space-3xl: 6.4rem;
-  --space-4xl: 8rem;
-  --space-5xl: 9.6rem;
-  --space-6xl: 12.8rem;
+  --space-xl: 4.8rem;
+  --space-2xl: 6.4rem;
+  --space-3xl: 9.6rem;
+  --space-4xl: 12rem;
+  --space-5xl: 14.4rem;
+  --space-6xl: 16rem;
 
-  --fs-xxs: 1.1rem;
-  --fs-xs: 1.2rem;
-  --fs-sm: 1.5rem;
-  --fs-base: 1.7rem;
+  --fs-xxs: 1.05rem;
+  --fs-xs: 1.15rem;
+  --fs-sm: 1.4rem;
+  --fs-base: 1.65rem;
   --fs-md: 2.4rem;
   --fs-lg: 3.4rem;
   --fs-xl: 4.2rem;
   --fs-xxl: 6.8rem;
 
-  --fs-display: clamp(3.2rem, 4.8vw, 6.4rem);
-  --fs-heading: clamp(2.8rem, 2.8vw, var(--fs-xl));
-  --fs-action: clamp(2.2rem, 2vw, var(--fs-lg));
+  --fs-display: clamp(3.1rem, 4.6vw, 6.2rem);
+  --fs-heading: clamp(2.4rem, 2.4vw, 3.4rem);
+  --fs-action: clamp(2.1rem, 2vw, var(--fs-lg));
   --touch-target: 4.4rem;
 
-  --radius-img: 0.8rem;
+  --radius-img: 1.75rem;
   --radius-pill: 10rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html {
@@ -49,7 +53,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-size: var(--fs-base);
-  line-height: 1.55;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -64,7 +68,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.025;
+  opacity: 0.018;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -77,16 +81,16 @@ h1 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: var(--fs-display);
   font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.2;
+  letter-spacing: -0.026em;
+  line-height: 1.15;
 }
 
 h2 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: var(--fs-heading);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.024em;
 }
 
 h3 {
@@ -95,7 +99,7 @@ h3 {
   color: var(--grey);
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .serif_accent {
@@ -154,7 +158,7 @@ h3 {
 
 @media (max-width: 768px) {
   :root {
-    --fs-display: clamp(2.8rem, 6.8vw, 4.2rem);
+    --fs-display: clamp(2.7rem, 6.5vw, 4rem);
   }
 }
 
@@ -166,7 +170,7 @@ h3 {
 
 @media (max-width: 500px) {
   :root {
-    --fs-heading: 2.6rem;
+    --fs-heading: 2.35rem;
   }
 }
 

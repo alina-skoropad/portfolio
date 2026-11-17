@@ -25,8 +25,8 @@
     font-family: var(--font-serif), Georgia, serif;
     font-size: var(--fs-display);
     font-weight: 400;
-    line-height: 1.45;
-    letter-spacing: 0;
+    line-height: 1.36;
+    letter-spacing: -0.02em;
     color: var(--foreground);
     text-align: center;
     text-wrap: balance;
@@ -62,7 +62,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid #C85A32;
+      outline: 2px solid var(--accent);
       outline-offset: 4px;
       border-radius: 0.3rem;
     }
@@ -82,14 +82,14 @@
 
       @media (hover: hover) {
         &:hover {
-          color: #C85A32;
-          text-decoration-color: #C85A32;
+          color: var(--accent);
+          text-decoration-color: var(--accent);
         }
       }
 
       &.active {
-        color: #C85A32;
-        text-decoration-color: #C85A32;
+        color: var(--accent);
+        text-decoration-color: var(--accent);
         text-decoration-thickness: 2.5px;
       }
     }
@@ -104,8 +104,8 @@
       transform: translateY(-0.14em);
       padding: 0.48em 0.72em;
       margin: 0 0.1em;
-      border-radius: 0.3rem;
-      background-color: #ece7df;
+      border-radius: 0.45rem;
+      background-color: var(--surface, #e8e3dc);
       color: var(--foreground);
 
       @media (hover: hover) {
@@ -150,7 +150,7 @@
       }
 
       &:focus-visible {
-        outline: 2px solid #C85A32;
+        outline: 2px solid var(--accent);
         outline-offset: 2px;
         border-radius: 0.3rem;
       }
@@ -180,6 +180,7 @@
   }
 
   @for $i from 1 through 25 {
+
     .hero__word:nth-child(#{$i}),
     .hero__tag:nth-child(#{$i}),
     .hero__tagGroup:nth-child(#{$i}) .hero__tag,
@@ -206,6 +207,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero__word,
   .hero__tag,
   .hero__tagSuffix {
