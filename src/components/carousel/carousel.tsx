@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import Slider, { Settings } from "react-slick";
+import {useRef, useEffect} from "react";
+import Slider, {Settings} from "react-slick";
 import Image from "@/components/common/image";
 import styles from "./carousel.module.scss";
 
@@ -16,25 +16,23 @@ type ArrowProps = {
   onClick?: () => void;
 };
 
-const NextArrow = ({ onClick }: ArrowProps) => (
-  <button
-    type="button"
-    className={`${styles["slider__arrow"]} ${styles["slider__arrow--next"]}`}
-    onClick={onClick}
-    aria-label="Next Slide"
-  />
+const NextArrow = ({onClick}: ArrowProps) => (
+  <button type="button" className={`${styles["slider__arrow"]} ${styles["slider__arrow--next"]}`} onClick={onClick} aria-label="Next Slide">
+    <svg className={styles["slider__arrow_icon"]} viewBox="0 0 16 16" aria-hidden="true">
+      <path d="m5 2 6 6-6 6" />
+    </svg>
+  </button>
 );
 
-const PrevArrow = ({ onClick }: ArrowProps) => (
-  <button
-    type="button"
-    className={`${styles["slider__arrow"]} ${styles["slider__arrow--prev"]}`}
-    onClick={onClick}
-    aria-label="Previous Slide"
-  />
+const PrevArrow = ({onClick}: ArrowProps) => (
+  <button type="button" className={`${styles["slider__arrow"]} ${styles["slider__arrow--prev"]}`} onClick={onClick} aria-label="Previous Slide">
+    <svg className={styles["slider__arrow_icon"]} viewBox="0 0 16 16" aria-hidden="true">
+      <path d="m11 2-6 6 6 6" />
+    </svg>
+  </button>
 );
 
-const MyCarousel = ({ images }: { images: ImageObject[] }) => {
+const MyCarousel = ({images}: {images: ImageObject[]}) => {
   const sliderRef = useRef<Slider | null>(null);
 
   useEffect(() => {
@@ -76,13 +74,7 @@ const MyCarousel = ({ images }: { images: ImageObject[] }) => {
       <Slider ref={sliderRef} {...settings}>
         {images.map((img, index) => (
           <div key={`${img.src}-${index}`} className={styles["slider__slide"]}>
-            <Image
-              src={img.src}
-              alt={img.alt}
-              width={1920}
-              height={900}
-              className={styles["slider__image"]}
-            />
+            <Image src={img.src} alt={img.alt} width={1920} height={900} className={styles["slider__image"]} />
           </div>
         ))}
       </Slider>

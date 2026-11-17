@@ -146,7 +146,7 @@ export default function Home() {
                     )}
                   </span>
                   <button type="button" onClick={() => setActiveFilter(null)}>
-                    ✕ Clear filter
+                    Clear filter
                   </button>
                 </motion.div>
               )}
