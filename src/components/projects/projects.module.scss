@@ -127,13 +127,8 @@
 
     @media (hover: hover) {
       &:hover {
-        color: var(--accent);
+        opacity: 0.8;
       }
-    }
-
-    &.active {
-      color: var(--accent);
-      font-weight: 500;
     }
 
     &:focus-visible {
