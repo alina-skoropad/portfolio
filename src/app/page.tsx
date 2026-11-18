@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useMemo, useState, useRef } from "react";
+import { Fragment, useMemo, useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./page.module.scss";
 import Projects from "@/components/projects/projects";
@@ -57,7 +57,25 @@ const heroSegments: HeroSegment[] = [
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [isFilterSticky, setIsFilterSticky] = useState(false);
   const projectsSectionRef = useRef<HTMLDivElement>(null);
+  const filterStatusRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const filterStatus = filterStatusRef.current;
+
+    if (!activeFilter || !filterStatus) {
+      setIsFilterSticky(false);
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsFilterSticky(!entry.isIntersecting);
+    });
+
+    observer.observe(filterStatus);
+    return () => observer.disconnect();
+  }, [activeFilter]);
 
   const toggleFilter = (tag: string) => {
     setActiveFilter((prev) => {
@@ -130,11 +148,19 @@ export default function Home() {
             })}
           </h1>
 
-          <div aria-live="polite">
+          <div
+            ref={filterStatusRef}
+            className={`${styles.hero__reset_slot} ${
+              activeFilter ? styles["hero__reset_slot--active"] : ""
+            }`}
+            aria-live="polite"
+          >
             <AnimatePresence>
               {activeFilter && (
                 <motion.div
-                  className={styles.hero__reset}
+                  className={`${styles.hero__reset} ${
+                    isFilterSticky ? styles["hero__reset--sticky"] : ""
+                  }`}
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
