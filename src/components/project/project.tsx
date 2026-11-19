@@ -5,6 +5,7 @@ import Image from "@/components/common/image";
 import Link from "next/link";
 import { motion, Variants, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import dynamic from "next/dynamic";
+import type { GalleryContentBlock, ProjectData } from "@/data/ProjectsList";
 
 import styles from "./project.module.scss";
 
@@ -12,35 +13,9 @@ const MyCarousel = dynamic(() => import("@/components/carousel/carousel"), {
   ssr: false,
 });
 
-type ImageObject = {
-  src: string;
-  alt: string;
-  className?: string;
-  figcaption?: string;
-};
-
-type Project = {
-  id: string;
-  title: string;
-  description: string;
-  process: string;
-  role: string;
-  contribution: {
-    items: string[];
-  };
-  timeline: string;
-  imageUrl: string;
-  link?: string;
-  button?: string;
-  colorClass?: string;
-  galleryImages?: ImageObject[];
-  additionalPosition?: number;
-  additionalImages?: ImageObject[];
-};
-
 type ProjectDetailsProps = {
-  project: Project;
-  nextProject: Project;
+  project: ProjectData;
+  nextProject: ProjectData;
 };
 
 const fadeInUp: Variants = {
@@ -91,9 +66,24 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
   const heroY = useTransform(heroScroll, [0, 1], ["0%", "20%"]);
   const heroScale = useTransform(heroScroll, [0, 1], [1, 1.06]);
 
-  const additionalCarousel = useMemo(() => {
-    return project.additionalImages ? <MyCarousel images={project.additionalImages} /> : null;
-  }, [project.additionalImages]);
+  const galleryContent = useMemo<GalleryContentBlock[]>(() => {
+    if (project.galleryContent) return project.galleryContent;
+
+    return (project.galleryImages ?? []).flatMap((image, index) => {
+      const blocks: GalleryContentBlock[] = [{ type: "image", ...image }];
+
+      if (index === project.additionalPosition && project.additionalImages) {
+        blocks.push({ type: "carousel" });
+      }
+
+      return blocks;
+    });
+  }, [
+    project.galleryContent,
+    project.galleryImages,
+    project.additionalPosition,
+    project.additionalImages,
+  ]);
 
   return (
     <div className={styles.project__container}>
@@ -134,7 +124,11 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
         <p>{project.process}</p>
       </motion.div>
 
-      <div className={styles.project__details}>
+      <div
+        className={`${styles.project__details} ${
+          project.galleryContent ? styles["project__details--with-story"] : ""
+        }`}
+      >
         <motion.div
           className={`${styles["project__details-item"]} ${styles["project__details-item--contr"]}`}
           initial="hidden"
@@ -144,23 +138,25 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
         >
           <h3>My role</h3>
           <p>{project.role}</p>
-          <motion.ul
-            className={styles.project__contribution}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {project.contribution.items.map((item) => (
-              <motion.li
-                key={item}
-                className={styles["project__contribution-item"]}
-                variants={listItemAnimation}
-              >
-                {item}
-              </motion.li>
-            ))}
-          </motion.ul>
+          {project.contribution.items.length > 0 && (
+            <motion.ul
+              className={styles.project__contribution}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {project.contribution.items.map((item) => (
+                <motion.li
+                  key={item}
+                  className={styles["project__contribution-item"]}
+                  variants={listItemAnimation}
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </motion.ul>
+          )}
         </motion.div>
 
         <motion.div
@@ -176,6 +172,7 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
 
         {project.link && (
           <motion.div
+            className={styles.project__action}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -195,11 +192,49 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
         )}
       </div>
 
-      {project.galleryImages && (
+      {galleryContent.length > 0 && (
         <div className={styles.project__gallery}>
-          {project.galleryImages.map((img, index) => (
-            <React.Fragment key={img.src}>
+          {galleryContent.map((block, index) => {
+            const key = `${block.type}-${index}`;
+
+            if (block.type === "carousel") {
+              const carouselImages = block.images ?? project.additionalImages;
+              return carouselImages
+                ? (
+                  <div key={key} className={styles.project__carousel}>
+                    <MyCarousel images={carouselImages} />
+                  </div>
+                )
+                : null;
+            }
+
+            if (block.type === "note") {
+              return (
+                <p key={key} className={styles.project__note}>
+                  {block.text}
+                </p>
+              );
+            }
+
+            if (block.type === "text") {
+              return (
+                <motion.section
+                  key={key}
+                  className={styles.project__story}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeInUp}
+                >
+                  <h2>{block.heading}</h2>
+                  <p>{block.text}</p>
+                </motion.section>
+              );
+            }
+
+            return (
               <motion.figure
+                key={key}
                 className={styles.project__image}
                 initial="hidden"
                 whileInView="visible"
@@ -216,19 +251,18 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
               >
                 <div className={styles.project__image_wrapper}>
                   <Image
-                    src={img.src}
-                    alt={img.alt}
+                    src={block.src}
+                    alt={block.alt}
                     width={2560}
                     height={900}
-                    className={img.className ? styles[img.className] : undefined}
+                    className={block.className ? styles[block.className] : undefined}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 100vw"
                   />
                 </div>
-                {img.figcaption && <figcaption>{img.figcaption}</figcaption>}
+                {block.figcaption && <figcaption>{block.figcaption}</figcaption>}
               </motion.figure>
-              {index === project.additionalPosition && additionalCarousel}
-            </React.Fragment>
-          ))}
+            );
+          })}
         </div>
       )}
 

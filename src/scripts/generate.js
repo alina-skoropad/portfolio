@@ -8,7 +8,7 @@ const outputDir = "public/images/projects/locast";
 const breakpoints = [320, 480, 768, 1024, 1280, 1920, 2560];
 const formats = ["jpg", "webp"];
 const sourceFiles = fs.readdirSync(inputDir).filter(
-  (file) => !/-\d+w\.(jpg|webp)$/i.test(file)
+  (file) => !/(?:-\d+w)+\.(?:jpg|webp)$/i.test(file)
 );
 
 const generateImages = async () => {
