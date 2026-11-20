@@ -20,19 +20,14 @@ type HeroSegment =
     };
 
 const heroSegments: HeroSegment[] = [
-  { type: "text", text: "I connect" },
+  { type: "text", text: "I" },
   { type: "tag", label: "Design", filter: "Design", variant: "serif-italic" },
   { type: "text", text: "and" },
   { type: "tag", label: "Code", filter: "Code", variant: "mono-badge" },
-  { type: "text", text: "through" },
-  { type: "tag", label: "Branding", filter: "Branding", variant: "serif-italic" },
-  { type: "text", text: "and" },
-  { type: "tag", label: "MARKETING", filter: "Marketing", variant: "mono-badge" },
-  { type: "text", text: "to create" },
   { type: "tag", label: "Web", filter: "Web", variant: "serif-italic" },
   { type: "text", text: "and" },
   { type: "tag", label: "Mobile", filter: "App", variant: "serif-italic" },
-  { type: "text", text: "products for both" },
+  { type: "text", text: "products for" },
   { type: "tag", label: "B2B", filter: "B2B", variant: "mono-badge" },
   { type: "text", text: "and" },
   {
@@ -42,17 +37,20 @@ const heroSegments: HeroSegment[] = [
     variant: "mono-badge",
     suffix: ",",
   },
-  { type: "text", text: "including" },
+  { type: "text", text: "from" },
+  { type: "tag", label: "Branding", filter: "Branding", variant: "serif-italic" },
+  { type: "text", text: "and" },
+  { type: "tag", label: "Marketing", filter: "Marketing", variant: "mono-badge" },
+  { type: "text", text: "to" },
   { type: "tag", label: "Dashboards", filter: "Dashboard", variant: "serif-italic" },
   { type: "text", text: "and" },
   {
     type: "tag",
-    label: "ADMIN INTERFACES",
+    label: "Admin interfaces",
     filter: "Admin",
     variant: "mono-badge",
-    noSpaceAfter: true,
-  },
-  { type: "text", text: "." },
+    suffix: ".",
+  }
 ];
 
 export default function Home() {

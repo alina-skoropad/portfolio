@@ -194,6 +194,17 @@ export default function ProjectDetails({ project, nextProject }: ProjectDetailsP
 
       {galleryContent.length > 0 && (
         <div className={styles.project__gallery}>
+          {project.galleryContent && (
+            <motion.p
+              className={styles["project__gallery-label"]}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+            >
+              Project highlights
+            </motion.p>
+          )}
           {galleryContent.map((block, index) => {
             const key = `${block.type}-${index}`;
 
